@@ -1,0 +1,91 @@
+// modules/header
+
+$root      : #{$app-prefix}-header;
+
+.#{$root} {
+
+  &__action {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+
+    &__cart {
+      border-radius: 3px;
+      background: $brand-primary;
+      padding : 5px 20px;
+      color: white;
+
+      svg {
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      &__count {
+        margin-left: 7px;
+        display: inline-block;
+        vertical-align: middle;
+        font: {
+          size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  margin-left: 15px;
+  float: left;
+}
+
+.navbar-header {
+}
+
+.navbar-brand {
+  padding: 10px;
+
+  @media (max-width: $break-point-xs-max) {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+  }
+
+  @media (min-width: $break-point-sm) {
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    margin-left: -75px !important;
+  }
+
+  img {
+    height: 45px;
+
+    @media (max-width: $break-point-xs-max) {
+      height: 30px;
+    }
+  }
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+}
+
+.navbar-default {
+  background: #fff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background: #424242;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $type-primary-color;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+      padding-top: 22px;
+      padding-bottom: 22px;
+  }
+}

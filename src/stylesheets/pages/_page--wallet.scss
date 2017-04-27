@@ -1,0 +1,27 @@
+// pages/wallet
+$page       : #{$app-prefix}-page--wallet;
+
+
+.#{$page} {
+  background: rgb(249,249,249);
+
+  .#{$app-prefix} {
+
+    &-link {
+
+      &--password {
+        padding: 20px 0;
+        font-size: 12px;
+      }
+    }
+
+    &-layout-container {
+      background: rgb(249,249,249);
+      margin-top: ($header-height + 60px);
+
+      @media (max-width: $break-point-xs-max) {
+        margin-top: (60px);
+      }
+    }
+  }
+}

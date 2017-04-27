@@ -1,0 +1,111 @@
+
+// page/landing
+
+$page          : #{$app-prefix}-page--home;
+
+.#{$page} {
+
+.es-section--home {
+  background: rgb(249,249,249);
+}
+
+  .es-section--banner {
+
+    p {
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+
+  .#{$app-prefix} {
+
+    &-layout-container {
+      margin-top: 0;
+    }
+  }
+
+  .navbar {
+    margin-bottom: 0;
+  }
+}
+
+$m-sticky-header    : al;
+
+$tab           : #{$m-sticky-header}-tab;
+
+$tab-bg   : #fff;
+$tab-item-bg   : #fff;
+
+.#{$m-sticky-header} {
+
+  &-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    background-color: $tab-bg;
+    padding: 0 25px;
+	  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+    &-navigation {
+    color: #2ecc71;
+    padding: 10px;
+    position: absolute;
+    cursor: pointer;
+    background-color: $tab-item-bg;
+
+
+    &--back {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+}
+
+.#{$tab} {
+  background-color: $tab-item-bg;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+  position: relative;
+  transition: .15s ease-out all;
+  -moz-transition: .15s ease-out all;
+  -webkit-transition: .15s ease-out all;
+  -o-transition: .15s ease-out all;
+  @include justify-content(center);
+
+  &__item {
+    font: {
+      size: 14px;
+    }
+    display: inline-block;
+    padding: 5px 20px;
+    color: #6f6f6f;
+    cursor: pointer;
+
+    &--active {
+      background-color: white;
+      color: #424242;
+      font: {
+        weight: 600;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #fdc611;
+        position: relative;
+        bottom: -19px;
+      }
+    }
+  }
+}

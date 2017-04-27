@@ -1,0 +1,337 @@
+// page/landing
+
+$root          : #{$app-prefix};
+
+
+.#{$root} {
+
+  &-footer {
+
+    background: #424242;
+
+
+    &__app-btn {
+      margin-bottom: 20px;
+
+      @media (max-width: $break-point-xs-max) {
+        width: 60%;
+      }
+    }
+
+    &__nav {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.35) 33%, rgba(255,255,255,0) 0%);
+      background-position: right;
+      background-size: 1px 10px;
+      background-repeat: repeat-y;
+
+      @media (max-width: $break-point-xs-max) {
+        margin: 20px 0;
+        padding-bottom: 30px;
+        background-image: linear-gradient(to right, white 33%, rgba(255,255,255,0) 0%);
+        background-position: bottom;
+        background-size: 10px 1px;
+        background-repeat: repeat-x;
+      }
+
+      &__title {
+        margin-bottom: 20px;
+      }
+
+      &__list {
+        padding: 0;
+
+        @media (max-width: $break-point-xs-max) {
+          padding-left: 10px;
+        }
+
+        li {
+          list-style: none;
+          font: {
+            size: 12px;
+          }
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    &--base {
+      padding-bottom: 40px !important;
+
+      &__address {
+        color: white;
+        font: {
+          size: 10px;
+        }
+      }
+
+      &__icon {
+        padding: 0 10px;
+
+        &-wrap {
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        display: inline-block;
+      }
+    }
+  }
+
+  &-layout {
+
+
+    &-container {
+      margin-top: 64px;
+
+      @media (max-width: $break-point-xs-max) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &-section {
+    background: white;
+
+    @media (max-width: $break-point-xs-max) {
+      padding: 25px 0;
+    }
+
+    @media (min-width: $break-point-sm) {
+      padding: 60px 0;
+    }
+
+    &--footer {
+      background: #424242;
+      color: white;
+      padding: 25px 0;
+      @media (max-width: $break-point-xs-max) {
+        padding: 20px 35px !important;
+      }
+    }
+
+    &--xs {
+      padding: 15px 0;
+
+      .#{$app-prefix}-section {
+
+        &__title {
+          font: {
+            size: 16px;
+          }
+          margin: 0;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &--mobile-app {
+      background-image: url("../../images/pages/landing/section--mobile-app.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: white;
+
+      @media (min-width: $break-point-xs-max) {
+        padding-bottom: 120px;
+      }
+
+      .#{$root} {
+
+        &-section {
+
+          &__content {
+            margin-bottom: 30px;
+          }
+
+          &__title {
+
+            @media (min-width: $break-point-xs-max) {
+              margin-bottom: 120px;
+            }
+
+            &:after {
+              border-color: white;
+            }
+          }
+        }
+      }
+    }
+
+    &__app {
+
+      &-btn {
+        @media (min-width: $break-point-sm) {
+          display: inline-block;
+        }
+
+        @media (max-width: $break-point-xs-max) {
+          text-align: center;
+        }
+
+        img {
+          height: 60px;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 60px;;
+      font: {
+        size: 30px;
+        weight: 700;
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #000;
+        width: 60px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 10px;
+      }
+    }
+
+    &--secondary {
+      background: $bg-secondary;
+    }
+
+    &--dark {
+      background: #f2f2f2;
+    }
+
+    &--press {
+      text-align: center;
+
+      img {
+        max-width: 100%;
+        margin: 20px 0;
+        width: 200px;
+      }
+    }
+
+    &--news-letter {
+      padding: 10px 0;
+
+      .#{$app-prefix} {
+
+        &-section__title {
+          font: {
+            family: $type-primary;
+            weight: 600;
+          }
+          @media (min-width: $break-point-sm) {
+            margin-top: 6px;
+          }
+
+          @media (max-width: $break-point-xs-max)  {
+            margin-bottom: 10px;
+            text-align: center;
+          }
+        }
+      }
+
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+
+    &--banner {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @media (min-width: $break-point-sm) {
+        height: 600px;
+      }
+
+      @media (max-width: $break-point-xs-max) {
+        height: 340px;
+      }
+
+      .container {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(center);
+        height: 100%;
+      }
+
+      &__heading {
+        color: white;
+        line-height: 1.42;
+        margin-bottom: 30px;
+
+        @media (max-width: $break-point-xs-max) {
+          font: {
+            size: 32px;
+            weight: 400;
+          }
+        }
+
+        @media (min-width: $break-point-sm) {
+          font: {
+            size: 38px;
+            weight: 600;
+          }
+        }
+      }
+
+      &--first {
+        background-image: url("http://unsplash.it/1920");
+      }
+    }
+
+    &__sub {
+      margin-bottom: 50px;
+
+      &__heading {
+        font: {
+          size: 24px;
+          family: $type-primary;
+          weight: 600;
+        }
+        padding-left: 10px;
+        border-left: 2px solid $brand-primary;
+        margin-bottom: 20px;
+      }
+
+      &__content {
+        color: $type-secondary-color;
+      }
+
+      &__section {
+        margin-bottom: 30px;
+      }
+
+      &__media {
+        @media (max-width: $break-point-xs-max) {
+          text-align: center;
+        }
+
+        img {
+          max-width: 100%;
+        }
+
+        &--right {
+          @media (max-width: $break-point-xs-max) {
+            text-align: center;
+          }
+
+          @media (min-width: $break-point-sm) {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.controls .btn {
+
+  svg {
+    height: 20px;
+  }
+}

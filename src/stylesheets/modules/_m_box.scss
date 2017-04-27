@@ -1,0 +1,323 @@
+// modules/box
+
+$root      : #{$app-prefix}-box;
+
+.#{$root} {
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  background: white;
+
+  &__time {
+    font: {
+      family: $type-primary;
+    }
+  }
+
+  &__header {
+    padding: {
+      top: 16px;
+      right: 30px;
+      bottom: 10px;
+      left: 30px;
+    }
+
+    @media (max-width: $break-point-xs-max) {
+      padding: 10px;
+    }
+
+    &--has-tab {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 30px;
+    }
+
+    &--has-sep {
+      border-bottom: 1px solid #dadada;
+    }
+  }
+
+  &__media {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    background-image: url("../../images/pages/product/page-product-media--peri-chicken.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 500px;
+
+    @media (max-width: $break-point-xs-max) {
+      height: 160px;
+    }
+  }
+
+  &__price {
+    text-align: right;
+    font: {
+      size: 22px;
+      weight: 600;
+    }
+    margin-bottom: 12px;
+    border-radius: 3px;
+  }
+
+  &__desc {
+    color: #6f6f6f;
+    font: {
+      size: 16px;
+    }
+    margin-top: 20px;
+  }
+
+  &__tag {
+    margin-bottom: 10px;
+
+    &__item {
+      background: #eee;
+      color: #6f6f6f;
+      border-radius: 3px;
+      font: {
+        size: 14px;
+        weight: 300;
+      }
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    color: #424242;
+    font: {
+      size: 26px;
+      weight: 600;
+    }
+  }
+
+  &__data {
+    margin-top: 30px;
+
+    &__title {
+      line-height: 40px;
+      font: {
+        size: 18px;
+      }
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      padding-left: 20px;
+
+      &__item {
+        margin-bottom: 20px;
+        color: $type-secondary-color;
+      }
+    }
+  }
+
+  &__body {
+    padding: 30px;
+
+    @media (max-width: $break-point-xs-max) {
+      padding: 10px;
+    }
+  }
+
+  &__action {
+    color: $brand-primary;
+    font: {
+      weight: 600;
+    }
+  }
+
+  &__section {
+    border: {
+      bottom: 1px solid #dadada;
+    }
+
+    &--has-sep {
+      border: {
+        bottom: 1px solid #dadada;
+      }
+    }
+
+    padding: {
+      top: 30px;
+      bottom: 30px;
+    }
+
+    &--last {
+      border-bottom: none;
+      padding-bottom: 15px;
+    }
+
+    .es-checkout__item--last {
+      margin-bottom: 0;
+    }
+
+    &__price {
+      float: right;
+      color: #fdc611;
+      font: {
+        weight: 600;
+      }
+    }
+  }
+
+  &__cta {
+    padding: 20px;
+    border-radius: 0;
+  }
+
+  &__summary {
+
+    &__row {
+      display: block;
+      padding: {
+        bottom: 10px;
+      }
+
+      &--has-sep {
+        border-top: 1px solid #dadada;
+        margin-top: 10px;
+        padding: {
+          top: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+
+    &__text,
+    &__price {
+      font: {
+        size: 16px;
+      }
+      color: $type-secondary-color;
+      display: inline-block;
+
+      &--highlight {
+        font: {
+          weight: 600;
+        }
+        color: $type-primary-color;
+      }
+    }
+  }
+
+
+  // states
+  &--depth-2 {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &--notice {
+
+    .#{$root} {
+
+      &__title {
+        font: {
+          size: 18px;
+        }
+      }
+
+      &__desc {
+        margin-top: 0;
+        color: #888;
+      }
+    }
+  }
+
+  &--minimal {
+
+    .#{$root} {
+
+      &__header {
+      }
+
+      &__body {
+        padding: {
+          top: 0;
+          right: 30px;
+          left: 30px;
+          bottom: 16px;
+        }
+
+        @media (max-width: $break-point-xs-max) {
+          padding: 10px;
+        }
+      }
+
+      &__desc {
+        margin-top: 0;
+      }
+
+      &__title {
+        font: {
+          size: 18px;
+        }
+      }
+    }
+  }
+
+  &--active {
+
+    .#{$root} {
+
+      &__header {
+        background: #fff7dc;
+      }
+    }
+  }
+
+  &--inactive {
+
+    .#{$root} {
+
+      &__header {
+        background: #f1f1f1;
+      }
+
+      &__title {
+        color: #888;
+      }
+
+      &__body,
+      &__footer {
+        display: none;
+      }
+    }
+  }
+
+  &--filled {
+
+    .#{$root} {
+
+      &__title {
+        color: #6f6f6f;
+      }
+
+      &__desc {
+        color: #6f6f6f;
+      }
+    }
+  }
+
+  &--card {
+
+    .#{$root} {
+
+      &__media {
+        height: 244px;
+      }
+
+      &__body {
+        padding: 20px;
+      }
+
+      &__footer {
+        padding: 20px;
+      }
+    }
+  }
+}

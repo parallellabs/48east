@@ -1,0 +1,54 @@
+// pages/product
+
+$page        : #{$app-prefix}-page--product;
+
+
+.#{$page} {
+
+  .#{$app-prefix} {
+
+    &-box {
+
+      &__content {
+        margin-top: 30px;
+      }
+
+      &__title {
+        @media (max-width: $break-point-xs-max) {
+          font: {
+            size: 24px;
+          }
+        }
+      }
+
+      &__price {
+
+        @media (max-width: $break-point-xs-max) {
+          float: left;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &-layout-container {
+      padding-top: 30px;
+      background: rgb(249,249,249);
+
+      @media (max-width: $break-point-xs-max) {
+        padding-top: 20px;
+      }
+    }
+
+    &-btn--primary-cart {
+      padding: 6px 40px;
+      font: {
+        size: 18px;
+      }
+
+      @media (max-width: $break-point-xs-max) {
+        float: right;
+        margin-top: 20px;
+      }
+    }
+  }
+}

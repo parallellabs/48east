@@ -1,0 +1,61 @@
+// base/helper
+
+$root         : #{$app-prefix}-h;
+
+.#{$root} {
+
+  &__v-hidden {
+    visibility: hidden;
+  }
+}
+
+.#{$app-prefix} {
+
+  &--has-overlay-cart {
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+    	background-color: rgba(0, 0, 0, 0.5);
+      height: 100%;
+      width: 100%;
+      z-index: 9999;
+    }
+  }
+
+  &-no-border {
+    border: none !important;
+  }
+
+  &-no-border-b {
+    border-bottom: none !important;
+  }
+
+  &-sep {
+
+    &--or {
+      margin: 40px 0;
+      position: relative;
+
+      &:after {
+        content: 'OR';
+        position: absolute;
+        left: 50%;
+        margin-left: -21px;
+        margin-top: -19px;
+        border: 1px solid #dadada;
+        padding: 6px 10px;
+        border-radius: 3px;
+        background: #fff;
+      }
+    }
+  }
+}
+
+.text-warning {
+  color: #fdc611;
+}

@@ -1,0 +1,52 @@
+// Variables
+
+$app-prefix                       : es;
+
+// branding
+$brand-primary                    : #c1272e;
+$brand-fb                         : #3b5998;
+
+// typography
+$type-primary                    : 'Source Sans Pro', sans-serif;
+$type-secondary                  : 'PT Serif', serif;
+$type-primary-color              : #424242;
+$type-secondary-color            : #888888;
+
+$bg-primary                      : white;
+$bg-secondary                    : #f9f9f9;
+
+$btn-primary-color               : $brand-primary;
+
+
+// modules
+
+// header
+$header-height: 64px;
+
+// #TODO: migrate to this http://breakpoint-sass.com/
+// break points
+$break-point-xs   : 320px;
+$break-point-sm   : 768px;
+$break-point-md   : 992px;
+$break-point-lg   : 1200px;
+
+$break-point-xs-max   : ($break-point-sm - 1);
+$break-point-sm-max   : ($break-point-md - 1);
+$break-point-md-max   : ($break-point-lg - 1);
+//
+// $grid-gutter-width           : 12.5px;
+//
+// // Small screen / tablet
+// $container-tablet:             (720px + $grid-gutter-width) !default;
+// //** For `$screen-sm-min` and up.
+// $container-sm:                 $container-tablet !default;
+//
+// // Medium screen / desktop
+// $container-desktop:            (940px + $grid-gutter-width) !default;
+// //** For `$screen-md-min` and up.
+// $container-md:                 $container-desktop !default;
+//
+// // Large screen / wide desktop
+// $container-large-desktop:      (1024px + $grid-gutter-width) !default;
+// //** For `$screen-lg-min` and up.
+// $container-lg:                 $container-large-desktop !default;
