@@ -4,58 +4,55 @@ $root         : #{$app-prefix}-btn;
 
 
 .#{$root} {
-
-
-
   &__count,
   &__minus,
   &__add {
-    padding: 0 10px;
     display: inline-block;
+    padding: 0 10px;
+
     font: {
       weight: 600;
     }
   }
-
   &--primary {
+    min-width: 173px;
+    border-color: $btn-primary-color !important;
+    border-radius: 3px;
     background: $btn-primary-color !important;
     color: white;
-    border-color: $btn-primary-color !important;
+    font-weight:600;
+    font-size:rem(18);
 
     &:hover,
     &:focus,
     &:active,
     &:active:focus,
     &:visited {
+      border-color: darken($btn-primary-color, 10);
       background: darken($btn-primary-color, 10);
       color: white;
-      border-color: darken($btn-primary-color, 10);
     }
   }
-
   &--add-to-cart {
     background: #fff !important;
     color: $btn-primary-color !important;
   }
-
   &-group {
     @include display(flex);
     @include align-items(center);
-    padding: 12px 30px;
+
     margin-bottom: 10px;
+    padding: 12px 30px;
     border-radius: 3px;
 
     &--default {
       border: solid 1px #b7b7b7;
       color: #888888;
     }
-
     &--fb {
       background: $brand-fb;
       color: #fff;
     }
-
-
     &__icon {
       svg {
         width: 26px;
@@ -63,10 +60,10 @@ $root         : #{$app-prefix}-btn;
         vertical-align: middle;
       }
     }
-
     &__text {
-      text-align: center;
       @include flex(1);
+
+      text-align: center;
     }
   }
 }

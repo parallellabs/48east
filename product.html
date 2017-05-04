@@ -23,16 +23,25 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse pre-login-nav" id="bs-example-navbar-collapse-1">
+      <div class="location-input">
+        <input type="text" name="" value="" placeholder="Enter your delivery location">
+        <div class="location-selected">
+          <svg class="icon icon-location-icon">
+            <use xlink:href="images/icons/icons-defs.svg#icon-location-icon"></use>
+          </svg>
+          <span>Marathahalli</span>
+        </div>
+      </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
+        <li><a href="#">Log in</a></li>
         <li>
-            <a href="#" class="es-header__action">
-                <div class="btn btn--primary es-header__action__cart es-btn--xs">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 16"><path fill="#FFF" fill-rule="evenodd" d="M.49 1h1.6065l.8646 2.647 1.9633 6.011.8017 2.4546c-.7653.2726-1.3167 1.0146-1.3167 1.8874 0 1.1028.879 2 1.9597 2 1.0805 0 1.9596-.8972 1.9596-2 0-.3644-.0976-.7054-.265-1h3.9394c-.1675.2946-.265.6356-.265 1 0 1.1028.879 2 1.9596 2 1.0805 0 1.9597-.8972 1.9597-2s-.8792-2-1.9597-2H6.722l-.653-2h9.1185c.211 0 .398-.1376.4648-.3418l1.9597-6c.0498-.1524.0247-.3202-.0672-.4504-.0923-.1306-.24-.2078-.3976-.2078H3.7825L2.9144.3418C2.8476.1376 2.6604 0 2.4496 0H.49C.2192 0 0 .2238 0 .5s.2193.5.49.5zM10.778 9V7h1.8713l-.3267 2h-1.5446zm0-3V4h2.3612l-.3266 2h-2.0346zm-.9798 0H7.7638l-.3266-2h2.3612v2zm0 1v2H8.2538L7.927 7h1.8714zm-2.538 2H5.7422l-.653-2h1.8447l.3264 2zm.0884 5c0 .5514-.4396 1-.9798 1-.5403 0-.98-.4486-.98-1s.4397-1 .98-1c.5402 0 .9798.4486.9798 1zm7.3286 0c0 .5514-.4395 1-.9798 1s-.98-.4486-.98-1 .4397-1 .98-1 .9798.4486.9798 1zm.157-5h-1.5182l.3267-2h1.8447l-.6533 2zm.9798-3h-2.008l.3266-2h2.3348l-.6534 2zM6.4438 4l.3267 2h-2.008L4.109 4h2.3346z"/></svg>
-                    <div class="es-header__action__cart__count">2</div>
-                </div>
-            </a>
+          <a href="#" class="btn btn-primary es-btn--primary">
+            <svg class="icon icon-cart-icon">
+              <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
+            </svg>
+            <span>2</span>
+          </a>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -48,14 +57,18 @@
                         <div class="es-box__header">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-9">
-                                    <div class="es-box__title">Cantonese Braised Fish with Hunan Fried rice</div>
+                                    <div class="es-box__title large">Cantonese Braised Fish with Hunan Fried rice
+                                      <svg class="icon icon-non-veg-icon">
+                                        <use xlink:href="images/icons/icons-defs.svg#icon-non-veg-icon"></use>
+                                      </svg>
+                                    </div>
                                     <div class="es-box__tag">
                                         <div class="es-box__tag__item label label-default">Spicy</div>
                                         <div class="es-box__tag__item label label-default">Sweet</div>
                                         <div class="es-box__tag__item label label-default">Spicy</div>
                                         <div class="es-box__tag__item label label-default">Sweet</div>
                                     </div>
-                                    <div class="es-box__desc">Peanut butter and crushed pepper glazed grilled chicken in freshly steamed bao bread with lettuce, pickled cucumber, cheese and black pepper spread.</div>
+                                    <div class="es-box__desc large">Peanut butter and crushed pepper glazed grilled chicken in freshly steamed bao bread with lettuce, pickled cucumber, cheese and black pepper spread.</div>
                                 </div>
                                 <div class="col-xs-12 col-sm-3">
                                     <div class="es-box__price">₹220</div>
@@ -102,7 +115,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="es-box__title">Food Allergy Notice</div>
-                                    <div class="es-box__desc">Our meals are prepared in a kitchen environment that contains nuts, gluten, shellfish, and dairy. We use best practices when preparing our meals, however, inadvertent cross-contamination may occur. We cannot guarantee the complete absence of allergens. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food-borne illness.</div>
+                                    <div class="es-box__desc large">Our meals are prepared in a kitchen environment that contains nuts, gluten, shellfish, and dairy. We use best practices when preparing our meals, however, inadvertent cross-contamination may occur. We cannot guarantee the complete absence of allergens. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food-borne illness.</div>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +125,7 @@
         </div>
         <section class="es-section  es-section--xs es-section--news-letter">
             <div class="container">
-                <div class="row">
+                <div class="row-fluid">
                     <div class="col-xs-12 col-sm-8">
                         <h3 class="es-section__title">SIGN UP TO OUR NEWSLETTER</h3>
                     </div>
@@ -124,7 +137,9 @@
                                       <input type="text" class="form-control" placeholder="Email Address">
                                       <span class="input-group-btn">
                                         <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
-                                            <i class="glyphicon glyphicon-envelope"></i>
+                                          <svg class="icon icon-msg_btn">
+                                            <use xlink:href="images/icons/icons-defs.svg#icon-msg_btn"></use>
+                                          </svg>
                                         </button>
                                       </span>
                                     </div><!-- /input-group -->
@@ -135,6 +150,7 @@
                 </div>
             </div>
         </section>
+
         <section class="es-section es-section--footer es-footer">
             <div class="container">
                 <div class="row">
@@ -142,9 +158,9 @@
                         <div class="es-footer__nav">
                             <div class="es-footer__nav__title">ABOUT</div>
                             <ul class="es-footer__nav__list">
-                                <li>About us</li>
-                                <li>Career</li>
-                                <li>Blog</li>
+                                <li><a href="javascript:void(0);">About us</a></li>
+                                <li><a href="javascript:void(0);">Career</a></li>
+                                <li><a href="javascript:void(0);">Blog</a></li>
                             </ul>
                         </div>
                     </div>
@@ -152,9 +168,9 @@
                         <div class="es-footer__nav">
                             <div class="es-footer__nav__title">Help</div>
                             <ul class="es-footer__nav__list">
-                                <li>Support</li>
-                                <li>FAQ</li>
-                                <li>Bulk/Party Orders</li>
+                                <li><a href="javascript:void(0);">Support</a></li>
+                                <li><a href="javascript:void(0);">FAQ</a></li>
+                                <li><a href="javascript:void(0);">Bulk/Party Orders</a></li>
                             </ul>
                         </div>
                     </div>
@@ -162,19 +178,19 @@
                         <div class="es-footer__nav">
                             <div class="es-footer__nav__title">Terms</div>
                             <ul class="es-footer__nav__list">
-                                <li>Terms & Conditions</li>
-                                <li>Privacy Policy</li>
-                                <li>Contact us</li>
+                                <li><a href="javascript:void(0);"> Terms &amp; Conditions</a</li>
+                                <li><a href="javascript:void(0);"> Privacy Policy</a</li>
+                                <li><a href="javascript:void(0);"> Contact us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__app-btn">
+                        <a href="javascript:void(0);" class="es-footer__app-btn">
                             <img src="images/pages/landing/footer-android--app.svg" alt="android store">
-                        </div>
-                        <div class="es-footer__app-btn">
+                        </a>
+                        <a href="javascript:void(0);" class="es-footer__app-btn">
                             <img src="images/pages/landing/footer-ios--app.svg" alt="app store">
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -183,15 +199,21 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 es-footer--base__icon-wrap">
-                        <div class="es-footer--base__icon">
-                            <img src="images/icons/facebook.svg" alt="">
-                        </div>
-                        <div class="es-footer--base__icon">
-                            <img src="images/icons/instagram.svg" alt="">
-                        </div>
-                        <div class="es-footer--base__icon">
-                            <img src="images/icons/twitter.svg" alt="">
-                        </div>
+                        <a href="javascript:void(0);" class="es-footer--base__icon">
+                          <svg class="icon icon-msg_btn">
+                            <use xlink:href="images/icons/icons-defs.svg#icon-facebook"></use>
+                          </svg>
+                        </a>
+                        <a href="javascript:void(0);" class="es-footer--base__icon">
+                          <svg class="icon icon-msg_btn">
+                            <use xlink:href="images/icons/icons-defs.svg#icon-instagram"></use>
+                          </svg>
+                        </a>
+                        <a href="javascript:void(0);" class="es-footer--base__icon">
+                          <svg class="icon icon-msg_btn">
+                            <use xlink:href="images/icons/icons-defs.svg#icon-twitter"></use>
+                          </svg>
+                        </a>
                     </div>
                 </div>
                 <div class="row">
@@ -201,12 +223,33 @@
                 </div>
             </div>
         </section>
+
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="build/js/48east.min.js"></script>
+    <!-- <script src="build/js/48east.min.js"></script> -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+      // Location input visible
+      $('.location-input .location-selected').on('click', function(){
+        $(this).hide();
+        $(this).siblings('input').focus();
+      });
+      // On press enter on input
+      $('.location-input input').keypress(function(e)
+       {
+          if (e.keyCode == '13') {
+            $(this).siblings('.location-selected').find('span').text($(this).val());
+            $(this).siblings('.location-selected').show();
+
+            $(this).blur();
+          }
+        });
+      });
+    // end
+    </script>
 </body>
 </html>

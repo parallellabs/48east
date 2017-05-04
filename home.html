@@ -23,11 +23,26 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse pre-login-nav" id="bs-example-navbar-collapse-1">
+      <div class="location-input">
+        <input type="text" name="" value="" placeholder="Enter your delivery location">
+        <div class="location-selected">
+          <svg class="icon icon-location-icon">
+            <use xlink:href="images/icons/icons-defs.svg#icon-location-icon"></use>
+          </svg>
+          <span>Marathahalli</span>
+        </div>
+      </div>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Log in</a></li>
+        <li>
+          <a href="#" class="btn btn-primary es-btn--primary">
+            <svg class="icon icon-cart-icon">
+              <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
+            </svg>
+            <span>2</span>
+          </a>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -36,26 +51,64 @@
 <div class="es-layout-container">
     <section class="es-section es-section--banner es-section--banner--first">
         <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>NOW ON THE MENU</p>
-                    <h1 class="es-section--banner__heading">48 East <br>Specialities</h1>
-                    <div class="btn btn-primary es-btn es-btn--primary">Order Now</div>
+            <!-- slider -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <p>NOW ON THE MENU</p>
+                  <h1 class="es-section--banner__heading">48 East <br>Specialities</h1>
+                  <div class="btn btn-primary es-btn es-btn--primary">Order Now</div>
                 </div>
+                <div class="item">
+                  <p>NOW ON THE MENU</p>
+                  <h1 class="es-section--banner__heading">48 East <br>Specialities</h1>
+                  <div class="btn btn-primary es-btn es-btn--primary">Order Now</div>
+                </div>
+                <div class="item">
+                  <p>NOW ON THE MENU</p>
+                  <h1 class="es-section--banner__heading">48 East <br>Specialities</h1>
+                  <div class="btn btn-primary es-btn es-btn--primary">Order Now</div>
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 31"><path fill="#C1272E" fill-rule="evenodd" d="M20.5 25.6832c-.003.179-.0753.3502-.202.4768l-4.138 4.138c-.2693.2692-.706.2692-.9752 0L.702 15.8152c-.2692-.2693-.2692-.706 0-.9752L15.1848.3572c.2693-.2692.706-.2692.9752 0l4.138 4.138c.2692.2693.2692.7058 0 .9752l-9.8573 9.8572 9.8573 9.8572c.132.132.205.3118.202.4984zm-1.665-.0108l-9.857-9.8572c-.2693-.2693-.2693-.706 0-.9752l9.857-9.8572L15.6725 1.82 2.165 15.3276 15.6723 28.835l3.1627-3.1626z"/></svg>
+                </span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 31"><path fill="#C1272E" fill-rule="evenodd" d="M.5 25.6832c.003.179.0753.3502.202.4768l4.138 4.138c.2693.2692.706.2692.9752 0L20.298 15.8152c.2692-.2693.2692-.706 0-.9752L5.8152.3572C5.546.088 5.1092.088 4.84.3572L.702 4.4952c-.2692.2693-.2692.7058 0 .9752l9.8573 9.8572L.702 25.1848c-.132.132-.205.3118-.202.4984zm1.665-.0108l9.857-9.8572c.2693-.2693.2693-.706 0-.9752L2.165 4.9828 5.3275 1.82 18.835 15.3276 5.3277 28.835 2.165 25.6725z"/></svg>
+                </span>
+                <span class="sr-only">Next</span>
+              </a>
             </div>
+            <!-- slider end -->
         </div>
     </section>
     <!-- <section class="es-section es-section--map">
         <div class="container"></div>
     </section> -->
-<div class='al-container' id="es-sticky-header">
+<div class='al-container pre-login-nav sticky-nav' id="es-sticky-header">
     <div class="container">
         <div class='al-tab' id="al-tab">
             <div class='al-tab__item al-tab__item--1'>
               Asian Dumplings
             </div>
             <div class='al-tab__item al-tab__item--2'>
-              Rice & Noodle Bowls
+              Rice &amp; Noodle Bowls
             </div>
             <div class='al-tab__item al-tab__item--3 al-tab__item--active'>
               Sides
@@ -74,12 +127,28 @@
             <div class='ion-chevron-right'></div>
         </div>
     </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a href="#">
+          <input type="checkbox" name="veg" id="vegOnly">
+          <label for="vegOnly">Vegetarian dishes </label>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="btn btn-primary es-btn--primary">
+          <svg class="icon icon-cart-icon">
+            <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
+          </svg>
+          <span>2</span>
+        </a>
+      </li>
+    </ul>
 </div>
     <section class="es-section es-section--home">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <h1 class="es-section__title text-center">Rice & Noodle Bowls</h1>
+                    <h1 class="es-section__title text-center">Rice &amp; Noodle Bowls</h1>
                     <div class="row">
                         <div class="col-xs-12 col-sm-6">
                             <div class="es-box es-box--card">
@@ -87,7 +156,11 @@
                                 <div class="es-box__body">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <div class="es-box__title">Cantonese Braised Fish with Hunan Fried rice</div>
+                                            <div class="es-box__title">Cantonese Braised Fish with Hunan Fried rice
+                                              <svg class="icon icon-veg-icon">
+                                                <use xlink:href="images/icons/icons-defs.svg#icon-veg-icon"></use>
+                                              </svg>
+                                            </div>
                                             <div class="es-box__tag">
                                                 <div class="es-box__tag__item label label-default">Spicy</div>
                                                 <div class="es-box__tag__item label label-default">Sweet</div>
@@ -116,7 +189,11 @@
                                 <div class="es-box__body">
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <div class="es-box__title">Cantonese Braised Fish with Hunan Fried rice</div>
+                                            <div class="es-box__title">Cantonese Braised Fish with Hunan Fried rice
+                                              <svg class="icon icon-non-veg-icon">
+                                                <use xlink:href="images/icons/icons-defs.svg#icon-non-veg-icon"></use>
+                                              </svg>
+                                            </div>
                                             <div class="es-box__tag">
                                                 <div class="es-box__tag__item label label-default">Spicy</div>
                                                 <div class="es-box__tag__item label label-default">Sweet</div>
@@ -150,7 +227,7 @@
     </section>
     <section class="es-section  es-section--xs es-section--news-letter">
         <div class="container">
-            <div class="row">
+            <div class="row-fluid">
                 <div class="col-xs-12 col-sm-8">
                     <h3 class="es-section__title">SIGN UP TO OUR NEWSLETTER</h3>
                 </div>
@@ -162,7 +239,9 @@
                                   <input type="text" class="form-control" placeholder="Email Address">
                                   <span class="input-group-btn">
                                     <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
-                                        <i class="glyphicon glyphicon-envelope"></i>
+                                        <svg class="icon icon-msg_btn">
+                                          <use xlink:href="images/icons/icons-defs.svg#icon-msg_btn"></use>
+                                        </svg>
                                     </button>
                                   </span>
                                 </div><!-- /input-group -->
@@ -180,9 +259,9 @@
                     <div class="es-footer__nav">
                         <div class="es-footer__nav__title">ABOUT</div>
                         <ul class="es-footer__nav__list">
-                            <li>About us</li>
-                            <li>Career</li>
-                            <li>Blog</li>
+                            <li><a href="javascript:void(0);">About us</a></li>
+                            <li><a href="javascript:void(0);">Career</a></li>
+                            <li><a href="javascript:void(0);">Blog</a></li>
                         </ul>
                     </div>
                 </div>
@@ -190,9 +269,9 @@
                     <div class="es-footer__nav">
                         <div class="es-footer__nav__title">Help</div>
                         <ul class="es-footer__nav__list">
-                            <li>Support</li>
-                            <li>FAQ</li>
-                            <li>Bulk/Party Orders</li>
+                            <li><a href="javascript:void(0);">Support</a></li>
+                            <li><a href="javascript:void(0);">FAQ</a></li>
+                            <li><a href="javascript:void(0);">Bulk/Party Orders</a></li>
                         </ul>
                     </div>
                 </div>
@@ -200,19 +279,19 @@
                     <div class="es-footer__nav">
                         <div class="es-footer__nav__title">Terms</div>
                         <ul class="es-footer__nav__list">
-                            <li>Terms & Conditions</li>
-                            <li>Privacy Policy</li>
-                            <li>Contact us</li>
+                            <li><a href="javascript:void(0);"> Terms &amp; Conditions</a</li>
+                            <li><a href="javascript:void(0);"> Privacy Policy</a</li>
+                            <li><a href="javascript:void(0);"> Contact us</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                    <div class="es-footer__app-btn">
+                    <a href="javascript:void(0);" class="es-footer__app-btn">
                         <img src="images/pages/landing/footer-android--app.svg" alt="android store">
-                    </div>
-                    <div class="es-footer__app-btn">
+                    </a>
+                    <a href="javascript:void(0);" class="es-footer__app-btn">
                         <img src="images/pages/landing/footer-ios--app.svg" alt="app store">
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -221,15 +300,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 es-footer--base__icon-wrap">
-                    <div class="es-footer--base__icon">
-                        <img src="images/icons/facebook.svg" alt="">
-                    </div>
-                    <div class="es-footer--base__icon">
-                        <img src="images/icons/instagram.svg" alt="">
-                    </div>
-                    <div class="es-footer--base__icon">
-                        <img src="images/icons/twitter.svg" alt="">
-                    </div>
+                    <a href="javascript:void(0);" class="es-footer--base__icon">
+                      <svg class="icon icon-facebook">
+                        <use xlink:href="images/icons/icons-defs.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                    <a href="javascript:void(0);" class="es-footer--base__icon">
+                      <svg class="icon icon-instagram">
+                        <use xlink:href="images/icons/icons-defs.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                    <a href="javascript:void(0);" class="es-footer--base__icon">
+                      <svg class="icon icon-twitter">
+                        <use xlink:href="images/icons/icons-defs.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
                 </div>
             </div>
             <div class="row">
@@ -248,13 +333,30 @@
 <!-- sliders -->
 <!-- <link rel="stylesheet" href="build/vendors/sly-style.css"> -->
 <!-- <script src="build/vendors/sly-example.js"></script> -->
-<script src="build/vendors/jquery-scrolltofixed-min.js"></script>
+<script src="build/js/vendors/jquery-scrolltofixed-min.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script> -->
 <!-- <script src="build/js/48east.min.js"></script> -->
 <script>
-// sticky header
 $(document).ready(function() {
+  // sticky header
   $('#es-sticky-header').scrollToFixed();
+
+  // Location input visible
+  $('.location-input .location-selected').on('click', function(){
+    $(this).hide();
+    $(this).siblings('input').focus();
+  });
+  // On press enter on input
+  $('.location-input input').keypress(function(e)
+   {
+      if (e.keyCode == '13') {
+        $(this).siblings('.location-selected').find('span').text($(this).val());
+        $(this).siblings('.location-selected').show();
+
+        $(this).blur();
+      }
+  });
+  // end
 });
 
 </script>

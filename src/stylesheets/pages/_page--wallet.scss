@@ -6,18 +6,15 @@ $page       : #{$app-prefix}-page--wallet;
   background: rgb(249,249,249);
 
   .#{$app-prefix} {
-
     &-link {
-
       &--password {
         padding: 20px 0;
         font-size: 12px;
       }
     }
-
     &-layout-container {
-      background: rgb(249,249,249);
       margin-top: ($header-height + 60px);
+      background: rgb(249,249,249);
 
       @media (max-width: $break-point-xs-max) {
         margin-top: (60px);

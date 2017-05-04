@@ -3,43 +3,39 @@
 $root        : #{$app-prefix}-input;
 
 .#{$app-prefix} {
-
   &-form {
-
     &__floating {
       position: relative;
       margin-top: 25px;
 
       &__input {
-
         &:focus {
           border-color: #fdc611 !important;
 
           ~ label {
-            color: #fdc611;
             @include transform(scale(0.9));
+
             left: 0;
+            color: #fdc611;
           }
         }
       }
-
       &__label {
+        @include transform-origin(0 -1500%);
+        @include transition(transform 300ms ease, color 0.7s ease, left 0.2s ease);
+
         position: absolute;
         bottom: 2px;
         left: 12px;
         color: #b7b7b7;
         pointer-events: none;
-        @include transform-origin(0 -1500%);
-        @include transition(transform 300ms ease, color 0.7s ease, left 0.2s ease);
       }
     }
   }
 }
 
 .#{$root} {
-
   &-group {
-
     &--menu {
       box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
 
@@ -48,13 +44,20 @@ $root        : #{$app-prefix}-input;
       }
 
       .input-group-btn {
-
         @media (max-width: $break-point-xs-max) {
           display: none;
         }
-      }
 
+        .btn{
+          min-width: auto;
+          width: 134px;
+          height:60px;
+        }
+
+      }
       .es-input__form-control {
+        height:60px;
+
         @media (max-width: $break-point-xs-max) {
           border: {
             top-right-radius: 3px !important;
@@ -64,21 +67,20 @@ $root        : #{$app-prefix}-input;
       }
     }
   }
-
   &__form-control {
-    box-shadow: none;
     border: none;
     border-radius: 3px;
+    box-shadow: none;
   }
 }
 
 
 // bootstrap override
 .form-control {
-  border-radius: 3px;
-  color: #424242;
   border-color: #dadada;
+  border-radius: 3px;
   box-shadow: none;
+  color: #424242;
 
   input::-webkit-input-placeholder {
     color: #424242;
@@ -92,7 +94,6 @@ $root        : #{$app-prefix}-input;
   input:-ms-input-placeholder {
     color: #424242;
   }
-
   &:focus {
     border-color: #dadada;
     box-shadow: none;
@@ -103,6 +104,7 @@ $root        : #{$app-prefix}-input;
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
   border-radius: 3px;
+
   font: {
     size: 16px;
   }
@@ -123,16 +125,15 @@ label {
 }
 
 .form-group {
-
   &--warning {
     label {
       color: #fdc611;
+
       font: {
         weight: 400;
         size: 14px;
       }
     }
-
     .form-control {
       border-color: #fdc611!important;
     }

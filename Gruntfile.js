@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
-var bourbon = require('bourbon');
-bourbon.includePaths // Array of Bourbon paths
+  var bourbon = require('bourbon');
+  bourbon.includePaths // Array of Bourbon paths
 
   // Project configuration.
   grunt.initConfig({
@@ -10,8 +10,17 @@ bourbon.includePaths // Array of Bourbon paths
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'src/js/<%= pkg.name %>.js',
-        dest: 'build/js/<%= pkg.name %>.min.js'
+        // src: 'src/js/<%= pkg.name %>.js',
+        // dest: 'build/js/<%= pkg.name %>.min.js'
+
+        files: [{
+           expand: true,
+           src: '**/*.js',
+           dest: 'build/js',
+           cwd: 'src/js',
+           ext: '.min.js',
+           extDot: 'last'
+       }]
       }
     },
     sass: {
@@ -21,9 +30,17 @@ bourbon.includePaths // Array of Bourbon paths
         includePaths: require('bourbon').includePaths
       },
       dist: {
-        files: {
-          'build/css/app.css': 'src/stylesheets/app.scss'
-        }
+        // files: {
+        //   // 'build/css/app.css': 'src/stylesheets/app.scss'
+        // }
+        files: [{
+          expand: true,
+          cwd: 'src/stylesheets/',
+          src: '**/*.scss',
+          dest: 'build/css',
+          ext: '.css',
+          extDot: 'last'
+        }]
       }
     },
 
@@ -66,6 +83,7 @@ bourbon.includePaths // Array of Bourbon paths
 
   // Default task(s).
   grunt.registerTask('default', ['sass']);
-  grunt.registerTask('serv', ['express', 'watch']);
+  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('server', ['express', 'watch']);
 
 };

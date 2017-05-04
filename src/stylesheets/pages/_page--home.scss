@@ -4,26 +4,21 @@
 $page          : #{$app-prefix}-page--home;
 
 .#{$page} {
-
 .es-section--home {
   background: rgb(249,249,249);
 }
-
   .es-section--banner {
-
     p {
-      font-weight: 600;
       color: #fff;
+      font-weight: 600;
+      font-size:rem(14);
     }
   }
-
   .#{$app-prefix} {
-
     &-layout-container {
       margin-top: 0;
     }
   }
-
   .navbar {
     margin-bottom: 0;
   }
@@ -37,29 +32,25 @@ $tab-bg   : #fff;
 $tab-item-bg   : #fff;
 
 .#{$m-sticky-header} {
-
   &-container {
-    display: flex;
-    overflow: hidden;
     position: relative;
+    display: flex;
     align-items: center;
-    background-color: $tab-bg;
+    overflow: hidden;
     padding: 0 25px;
+    background-color: $tab-bg;
 	  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   }
-
     &-navigation {
-    color: #2ecc71;
-    padding: 10px;
     position: absolute;
-    cursor: pointer;
+    padding: 10px;
     background-color: $tab-item-bg;
-
+    color: #2ecc71;
+    cursor: pointer;
 
     &--back {
       left: 0;
     }
-
     &--next {
       right: 0;
     }
@@ -67,45 +58,97 @@ $tab-item-bg   : #fff;
 }
 
 .#{$tab} {
-  background-color: $tab-item-bg;
-  height: 60px;
+  @include justify-content(center);
+
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   flex-grow: 0;
   flex-shrink: 0;
+  flex-wrap: wrap;
   align-items: center;
-  position: relative;
+  height: 65px;
+  background-color: $tab-item-bg;
   transition: .15s ease-out all;
   -moz-transition: .15s ease-out all;
   -webkit-transition: .15s ease-out all;
   -o-transition: .15s ease-out all;
-  @include justify-content(center);
 
   &__item {
+    display: inline-block;
+    padding: 5px 20px;
+    color: rgba(111, 111, 111,0.8);
+    cursor: pointer;
+
     font: {
       size: 14px;
     }
-    display: inline-block;
-    padding: 5px 20px;
-    color: #6f6f6f;
-    cursor: pointer;
-
     &--active {
       background-color: white;
       color: #424242;
+
       font: {
         weight: 600;
       }
-
       &:after {
-        content: '';
+        position: relative;
+        bottom: -21px;
         display: block;
         width: 100%;
         height: 2px;
         background: #fdc611;
-        position: relative;
-        bottom: -19px;
+        content: '';
       }
+    }
+  }
+}
+
+// Bootstrap slider
+.carousel{
+  height:100%;
+
+  .carousel-inner{
+    @include transform(translateY(-50%));
+
+    top:50%;
+  }
+  .carousel-indicators{
+    bottom:-40px;
+
+    li{
+      margin:0;
+      width: 8px;
+      height: 8px;
+      border:none;
+      background-color:rgba(255,255,255,0.5);
+
+      &.active{
+        background-color:#fdc611;
+      }
+    }
+  }
+  .carousel-control{
+    @include transform(translateY(-50%));
+
+    top:50%;
+    bottom: auto;
+    width: auto;
+    background:none;
+    opacity:0.8;
+
+    span{
+      svg{
+        height:20px;
+
+        path{
+          fill: #fff;
+        }
+      }
+    }
+    &.left{
+      left:-40px;
+    }
+    &.right{
+      right:-40px;
     }
   }
 }
