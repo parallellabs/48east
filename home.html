@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="build/css/vendors/owl.carousel.css" />
-  <link rel="stylesheet" href="build/css/vendors/sly-style.css">
   <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body class="es-page es-page--home">
@@ -312,34 +311,13 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
       <!-- sliders -->
-      <!-- <link rel="stylesheet" href="build/vendors/sly-style.css"> -->
-      <!-- <script src="build/vendors/sly-example.js"></script> -->
       <script src="build/js/vendors/jquery-scrolltofixed-min.js"></script>
-
       <script src="build/js/vendors/owl.carousel.min.js"></script>
-      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Sly/1.6.1/sly.min.js"></script> -->
-      <!-- <script src="build/js/48east.min.js"></script> -->
+      <script src="build/js/48east.min.js"></script>
       <script>
       $(document).ready(function() {
         // sticky header
         $('#es-sticky-header').scrollToFixed();
-
-        // Location input visible
-        $('.location-input .location-selected').on('click', function(){
-          $(this).hide();
-          $(this).siblings('input').focus();
-        });
-        // On press enter on input
-        $('.location-input input').keypress(function(e)
-        {
-          if (e.keyCode == '13') {
-            $(this).siblings('.location-selected').find('span').text($(this).val());
-            $(this).siblings('.location-selected').show();
-
-            $(this).blur();
-          }
-        });
-        // end
 
         $('#home-carousel').owlCarousel({
           loop:false,

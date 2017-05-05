@@ -150,12 +150,14 @@ $tab-item-bg   : #fff;
     }
     &.left{
       left:-40px;
+
       @media (max-width: $break-point-xs-max) {
         left:0;
       }
     }
     &.right{
       right:-40px;
+
       @media (max-width: $break-point-xs-max) {
         right:0;
       }
