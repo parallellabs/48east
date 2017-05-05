@@ -234,38 +234,71 @@
 .hot-slider__item__rating__star--empty {
   color: #dadada; }
 
-.owl-nav .owl-prev {
+.owl-carousel .owl-nav .owl-prev {
   position: absolute;
   top: 50%;
   left: -55px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%); }
-  .owl-nav .owl-prev svg {
+  @media (max-width: 768px) {
+    .owl-carousel .owl-nav .owl-prev {
+      left: -25px; } }
+  .owl-carousel .owl-nav .owl-prev svg {
     color: #c1272e; }
 
-.owl-nav .owl-next {
+.owl-carousel .owl-nav .owl-next {
   position: absolute;
   top: 50%;
   right: -55px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   transform: translateY(-50%); }
-  .owl-nav .owl-next svg {
+  @media (max-width: 768px) {
+    .owl-carousel .owl-nav .owl-next {
+      right: -25px; } }
+  .owl-carousel .owl-nav .owl-next svg {
     color: #c1272e; }
 
-.owl-dots {
+.owl-carousel .owl-dots {
   text-align: center; }
-  .owl-dots .owl-dot {
+  .owl-carousel .owl-dots .owl-dot {
     display: inline-block;
     margin-right: 6px; }
-    .owl-dots .owl-dot span {
+    .owl-carousel .owl-dots .owl-dot span {
       display: inline-block;
       width: 6px;
       height: 6px;
       border-radius: 50%;
       background-color: rgba(66, 66, 66, 0.3); }
-    .owl-dots .owl-dot.active span {
+    .owl-carousel .owl-dots .owl-dot.active span {
       background-color: #c1272e; }
+
+.owl-carousel.home-carousel {
+  height: 100%; }
+  .owl-carousel.home-carousel .owl-stage-outer {
+    padding-left: 20px;
+    height: 100%; }
+    .owl-carousel.home-carousel .owl-stage-outer .owl-stage {
+      height: inherit; }
+      .owl-carousel.home-carousel .owl-stage-outer .owl-stage .owl-item {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        transform: translateY(-50%); }
+  .owl-carousel.home-carousel .owl-nav .owl-prev svg {
+    color: #fff; }
+  .owl-carousel.home-carousel .owl-nav .owl-next svg {
+    color: #fff; }
+  .owl-carousel.home-carousel .owl-dots {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center; }
+    .owl-carousel.home-carousel .owl-dots .owl-dot span {
+      background-color: rgba(255, 255, 255, 0.5); }
+    .owl-carousel.home-carousel .owl-dots .owl-dot.active span {
+      background-color: #fdc611; }
 
 /*# sourceMappingURL=sly-style.css.map */

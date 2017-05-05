@@ -36,8 +36,11 @@ $root      : #{$app-prefix}-header;
   margin-left: 15px;
 }
 
-.navbar-header {
-}
+// .navbar-header {
+//   @include media(max-width 768px){
+//     margin:0;
+//   }
+// }
 
 .navbar-brand {
   padding: 10px;

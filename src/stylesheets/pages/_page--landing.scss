@@ -40,7 +40,7 @@ $root          : #{$app-prefix};
         padding: 0;
 
         @media (max-width: $break-point-xs-max) {
-          padding-left: 10px;
+          padding-left: 0;
         }
 
         li {
@@ -99,7 +99,7 @@ $root          : #{$app-prefix};
     background: white;
 
     @media (max-width: $break-point-xs-max) {
-      padding: 25px 0;
+      padding: 25px 12.5px;
     }
     @media (min-width: $break-point-sm) {
       padding: 60px 0;
@@ -215,6 +215,11 @@ $root          : #{$app-prefix};
         color:#fff;
       }
     }
+    &__title:after{
+      @media (max-with: $break-point-xs-max){
+        content: none;
+      }
+    }
     &--secondary {
       background: $bg-secondary;
     }
@@ -238,6 +243,10 @@ $root          : #{$app-prefix};
         margin: 20px 0;
         max-width: 100%;
         width: 200px;
+
+        @media (max-width: $break-point-xs-max){
+          padding: 20px 0;
+        }
       }
     }
     &--news-letter {
@@ -246,9 +255,20 @@ $root          : #{$app-prefix};
       height:65px;
       box-shadow: 0 -1px 2px 0 rgba(0, 0, 0, 0.1);
 
+      @media (max-width: $break-point-xs-max){
+        padding-top:20px;
+        padding-bottom:20px;
+        height:auto;
+      }
+
       .row-fluid{
         height:65px;
         line-height:65px;
+
+        @media (max-width: $break-point-xs-max){
+          height:auto;
+          line-height:normal;
+        }
 
         & > div{
           display: inline-block;
@@ -361,6 +381,10 @@ $root          : #{$app-prefix};
           height:30px;
           background-color:$brand-primary;
           content:"";
+
+          @media (max-width: $break-point-xs-max){
+            left:-20px;
+          }
         }
         font: {
           size: 24px;
@@ -373,6 +397,10 @@ $root          : #{$app-prefix};
       }
       &__section {
         margin-bottom: 100px;
+
+        @media (max-width: $break-point-xs-max){
+          margin-bottom: 50px;
+        }
 
         .row{
           & > div{

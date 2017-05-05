@@ -110,6 +110,10 @@ $tab-item-bg   : #fff;
     @include transform(translateY(-50%));
 
     top:50%;
+
+    @media (max-width: $break-point-xs-max) {
+      padding-left: 40px;
+    }
   }
   .carousel-indicators{
     bottom:-40px;
@@ -146,9 +150,15 @@ $tab-item-bg   : #fff;
     }
     &.left{
       left:-40px;
+      @media (max-width: $break-point-xs-max) {
+        left:0;
+      }
     }
     &.right{
       right:-40px;
+      @media (max-width: $break-point-xs-max) {
+        right:0;
+      }
     }
   }
 }
