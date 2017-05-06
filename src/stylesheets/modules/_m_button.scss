@@ -33,6 +33,10 @@ $root         : #{$app-prefix}-btn;
       color: white;
     }
   }
+  &--sm{
+    min-width:60px;
+    height:40px;
+  }
   &--add-to-cart {
     background: #fff !important;
     color: $btn-primary-color !important;

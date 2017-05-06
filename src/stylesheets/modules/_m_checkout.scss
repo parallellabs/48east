@@ -3,171 +3,173 @@
 $root        : #{$app-prefix}-checkout;
 
 .#{$root} {
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   right: 0;
-  width: 340px;
+  bottom: 0;
   z-index: 99999;
-  background: white;
+  padding-right: 20px;
   padding-bottom: 40px;
+  padding-left: 20px;
+  max-width: 340px;
+  width:100%;
+  background: white;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 
   &__header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding-bottom: 20px;
     margin-bottom: 20px;
-    padding: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
   &__title {
   }
-
   &__close {
+    color: #6f6f6f;
   }
-
   &__like {
     position: relative;
-    padding-top: 30px;
     z-index: 0;
+    padding-top: 30px;
 
     &__title {
+      margin-bottom: 0 !important;
+
       font: {
         size: 16px !important;
       }
-      margin-bottom: 0 !important;
     }
-
-
+    .es-checkout__item__title{
+      margin-bottom:0;
+      font-size:12px;
+    }
+    .es-checkout__item__price{
+      margin-top:0;
+      font-size:14px;
+    }
     .#{$root}__item {
-      padding: 20px 20px 0 20px;
       margin-bottom: 0;
+      padding: 20px 0;
 
       &__media {
         width: 35%;
         height: 50px;
       }
-
       &__content {
         width: calc(65% - 30px);
       }
     }
   }
-
   &__item {
     position: relative;
     margin-bottom: 30px;
 
+    &:last-child{
+      margin-bottom:0;
+    }
     &__media {
-      border-radius: 3px;
+      float: left;
       margin-right: 20px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50% 50%;
       width: 50%;
       height: 75px;
-      float: left;
+      border-radius: 3px;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
-
     &__content {
-      width: calc(50% - 30px);
       float: left;
+      width: calc(50% - 30px);
     }
-
     &__title {
+      margin-bottom: 5px;
+      color: #424242;
+
       font: {
         size: 14px;
       }
-      margin-bottom: 5px;
     }
-
     &__close {
-      color: #b7b7b7;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -8px;
+      color: #b7b7b7;
+
       font: {
         size: 12px;
       }
-
       svg {
         height: 10px;
       }
     }
-
     &__form-control {
+      position: relative;
+      padding: 2px 5px;
       width: 55px !important;
       height: 30px;
       border: 1px solid #b7b7b7;
       border-radius: 3px;
-      padding: 2px 5px;
-      position: relative;
 
       &__count {
         padding-left: 10px;
       }
-
       &__up,
       &__down {
-        width: 8px;
+        svg{
+          width: 8px;
+        }
       }
-
       &__down {
         position: absolute;
+       top: 5px;
        right: 9px;
-       top: 4px;
       }
-
       &__up {
         position: absolute;
+        top: -3px;
         right: 9px;
-        top: -5px;
       }
     }
-
     &__price {
-      text-align: right;
       margin-top: 7px;
       color: #6f6f6f;
+      text-align: right;
     }
-
     &__add {
-      margin-top: 10px;
+      margin-top: -5px;
 
       svg {
-        width: 20px;
+        width: 18px;
       }
     }
-
     &__count {
       color: $brand-primary;
+      opacity: 0.4;
+
       font: {
         size: 24px;
         weight: 600;
       }
-      opacity: 0.4;
     }
   }
-
   &__body {
+    padding: 20px 0;
+    padding-top:0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 20px;
   }
-
   &__footer {
-    padding: 20px;
+    padding: 20px 0;
+    padding-bottom: 0;
 
     &__content {
       margin-bottom: 10px;
     }
-
     &__title {
-
+      color:#6f6f6f;
+      font-weight:600;
     }
-
     &__price {
 
     }
-
     &__action {
       text-align: right;
     }

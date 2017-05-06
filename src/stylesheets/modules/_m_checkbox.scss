@@ -4,30 +4,24 @@ $root       : #{$app-prefix}-checkbox;
 
 
 .#{$root} {
-
   &__input {
-    visibility: hidden;
     position: absolute;
+    visibility: hidden;
 
     &:checked {
-
-     ~ .#{$root} {
-
+     + .#{$root} {
         &__label {
-
-          .#{$root} {
-
-            &__label {
-
-              &__radio-style {
-                background: $brand-primary;
+          // .#{$root} {
+          //   &__label {
+              .es-outer{
+                border-color: $brand-primary;
                 -webkit-transition:background-color 0.4s linear;
                 -o-transition:background-color 0.4s linear;
                 -moz-transition:background-color 0.4s linear;
                 transition:background-color 0.4s linear;
 
-                &:before {
-                  border-color: $brand-primary;
+                .es-inner {
+                  background: $brand-primary;
                   -webkit-transition:border-color 0.4s linear;
                   -o-transition:border-color 0.4s linear;
                   -moz-transition:border-color 0.4s linear;
@@ -36,65 +30,54 @@ $root       : #{$app-prefix}-checkbox;
               }
             }
           }
-        }
-      }
+
+        // }
+      // }
     }
   }
-
   &__label {
-    margin-left: 30px;
     position: relative;
+    // margin-left: 30px;
     cursor: pointer;
 
     .#{$app-prefix} {
-
       &-icon {
         margin-right: 10px;
       }
     }
-
-    &__radio-style {
-      display: block;
+    .es-outer{
+      display: inline-block;
+      margin-right: 30px;
+      padding: 2px;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #b7b7b7;
       border-radius: 50%;
-      width: 6px;
-      height: 6px;
-      position: absolute;
-      left: -25px;
-      top: 10px;
-      vertical-align: middle;
 
-      &:before {
-        content: '';
-        width: 12px;
-        height: 12px;
-        border: 1px solid #b7b7b7;
-        border-radius: 50%;
+      .es-inner {
         display: block;
-        position: absolute;
-        left: -3px;
-        top: -3px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        vertical-align: middle;
       }
     }
   }
-
   &__sub {
-    margin-left: 30px;
+    margin-left: 42px;
     padding-bottom: 30px;
     color: $type-secondary-color;
 
     &--first-child {
       padding-top: 30px;
     }
-
     &--last-child {
       padding-bottom: 0;
     }
-
-
     .#{$root} {
-
       &__label {
         color: $type-secondary-color;
+
         font: {
           weight: 400;
         }

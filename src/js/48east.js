@@ -16,4 +16,12 @@ $(document).ready(function(){
     }
   });
   // end
+
+  $('.select-dropdown .dropdown-menu').on('click', 'a', function(e){
+    event.preventDefault();
+    // console.info($(e.target));
+    var addCaret = '<span class="caret"></span>';
+    var selectedItem = $(e.target).text();
+    $(this).parents('.select-dropdown').find('.dropdown-toggle').html(selectedItem + addCaret);
+  });
 })

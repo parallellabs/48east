@@ -17,6 +17,7 @@ $root     : #{$app-prefix}-tab;
     display: inline-block;
     color: $type-secondary-color;
     position: relative;
+    font-size:18px;
 
     &--active {
       color: $type-primary-color;

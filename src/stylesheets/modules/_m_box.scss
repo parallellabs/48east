@@ -33,6 +33,9 @@ $root      : #{$app-prefix}-box;
       border-bottom: 1px solid #dadada;
     }
   }
+  &--order{
+    margin-bottom:60px;
+  }
   &__media {
     height: 500px;
     border-top-left-radius: 3px;
@@ -163,8 +166,12 @@ $root      : #{$app-prefix}-box;
       bottom: 30px;
     }
     &--last {
-      padding-bottom: 15px;
       border-bottom: none;
+
+      padding: {
+        top: 20px;
+        bottom: 10px;
+      }
     }
     .es-checkout__item--last {
       margin-bottom: 0;
@@ -179,8 +186,13 @@ $root      : #{$app-prefix}-box;
     }
   }
   &__cta {
-    padding: 20px;
+    margin: 0 30px;
+    padding: 0 20px;
+    width: auto;
+    height: 40px;
     border-radius: 0;
+    border-radius: 3px;
+    line-height: 40px;
   }
   &__summary {
     &__row {
@@ -241,12 +253,73 @@ $root      : #{$app-prefix}-box;
         @media (max-width: $break-point-xs-max) {
           padding: 10px;
         }
+        p{
+          color:#6f6f6f;
 
+          font:{
+            size:18px;
+            weight:400;
+          }
+        }
+
+        h2{
+          color:#424242;
+
+          font:{
+            size:34px;
+            weight:400;
+          }
+        }
         padding: {
           top: 0;
           right: 30px;
           bottom: 16px;
           left: 30px;
+        }
+        .select-dropdown{
+          .dropdown-toggle{
+            padding-right: 30px;
+            width:100%;
+            height: 40px;
+            border: solid 1px #888888;
+            border-radius: 3px;
+            color:#424242;
+            text-align:left;
+
+            font: {
+              size: 16px;
+              weight:400;
+            }
+            &:hover,
+            &:focus{
+              background:none;
+            }
+            .caret{
+              float:right;
+              margin: 10px -20px 0;
+            }
+          }
+          .dropdown-menu{
+            width: 100%;
+            border:none;
+            box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+
+            li{
+              a{
+                padding: 10px 30px;
+                color:#424242;
+
+                font: {
+                  size: 14px;
+                  weight:400;
+                }
+                &:hover,
+                &:focus{
+                  background-color:#fff7dc;
+                }
+              }
+            }
+          }
         }
       }
       &__desc {
@@ -263,6 +336,9 @@ $root      : #{$app-prefix}-box;
     .#{$root} {
       &__header {
         background: #fff7dc;
+      }
+      &__footer{
+        padding-bottom: 30px;
       }
     }
   }

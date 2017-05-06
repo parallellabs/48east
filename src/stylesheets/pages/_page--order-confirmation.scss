@@ -98,8 +98,8 @@ $page            : #{$app-prefix}-page--order-confirmation;
 
             @media (max-width: $break-point-xs-max) {
               flex-basis: 100%;
-              padding:0;
               margin-bottom:10px;
+              padding:0;
             }
           }
           &__price {

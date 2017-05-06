@@ -8,29 +8,29 @@
 </head>
 <body class="es-page es-page--wallet">
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">
-              <img src="images/logo.png" alt="48 easetlogo">
-          </a>
-        </div>
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="48 easetlogo">
+                </a>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Gallery</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right hide visible-xs">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gallery</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
     </nav>
 
     <div class="es-layout-container">
@@ -152,9 +152,17 @@
                                     <div class="form-group">
                                         <label class="col-xs-12 es-h__v-hidden">Other</label>
                                         <div class="col-xs-12">
-                                            <select class="form-control" name="" id="">
-                                                <option value="label" selected>Other</option>
-                                            </select>
+                                            <div class="dropdown select-dropdown">
+                                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                    Home
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                    <li><a href="#"><span>Home</span></a></li>
+                                                    <li><a href="#"><span>Work</span></a></li>
+                                                    <li><a href="#"><span>Other</span></a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -238,8 +246,10 @@
                                 <div class="es-checkbox">
                                     <input class="es-checkbox__input" type="radio" id="add-home" name="address" checked="checked">
                                     <label class="es-checkbox__label" for="add-home">
-                                        <span class="es-checkbox__label__radio-style"></span>
-                                        Home
+                                        <span class="es-outer">
+                                            <span class="es-inner"></span>
+                                        </span>
+                                        <span class="label-text">Home</span>
                                     </label>
                                 </div>
                                 <div class="es-checkbox__sub es-checkbox__sub--first-child">
@@ -248,10 +258,12 @@
                                     Mobile: +91 7323973733
                                 </div>
                                 <div class="es-checkbox">
-                                    <input class="es-checkbox__input" type="radio" id="add-home" name="address">
-                                    <label class="es-checkbox__label" for="add-home">
-                                        <span class="es-checkbox__label__radio-style"></span>
-                                        Office
+                                    <input class="es-checkbox__input" type="radio" id="add-home1" name="address">
+                                    <label class="es-checkbox__label" for="add-home1">
+                                        <span class="es-outer">
+                                            <span class="es-inner"></span>
+                                        </span>
+                                        <span class="label-text">Office</span>
                                     </label>
                                 </div>
                                 <div class="es-checkbox__sub es-checkbox__sub--first-child">
@@ -332,9 +344,17 @@
                             </div>
                         </div>
                         <div class="es-box__body">
-                            <select class="form-control es-input__select">
-                                <option value=""></option>
-                            </select>
+                            <div class="dropdown select-dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Select your delivery slot
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#"><span>9:00 - 9:30 PM</span></a></li>
+                                    <li><a href="#"><span>9:30 - 10:00 PM</span></a></li>
+                                    <li><a href="#"><span>10:30 - 11:00 PM</span></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="es-box es-box--minimal es-box--depth-2">
@@ -395,10 +415,10 @@
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Have a Promo Code?">
                                     <span class="input-group-btn">
-                                    <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
-                                        Add
-                                    </button>
-                                  </span>
+                                        <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
+                                            Add
+                                        </button>
+                                    </span>
                                 </div><!-- /input-group -->
                             </div>
                         </div>
@@ -406,105 +426,7 @@
                 </div>
             </div>
         </div>
-        <section class="es-section es-section--xs es-section--news-letter">
-            <div class="container">
-                <div class="col-xs-12 col-sm-6">
-                    <h3 class="es-section__title">SIGN UP TO OUR NEWSLETTER</h3>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <div class="pull-right">
-                        <div class="form-inline">
-                            <div class="form-group">
-                                <div class="input-group input-group-sm">
-                                  <input type="text" class="form-control" placeholder="Email Address">
-                                  <span class="input-group-btn">
-                                    <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
-                                      <svg class="icon icon-msg_btn">
-                                        <use xlink:href="images/icons/icons-defs.svg#icon-msg_btn"></use>
-                                      </svg>
-                                    </button>
-                                  </span>
-                                </div><!-- /input-group -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="es-section es-section--footer es-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__nav">
-                            <div class="es-footer__nav__title">ABOUT</div>
-                            <ul class="es-footer__nav__list">
-                                <li><a href="javascript:void(0);">About us</a></li>
-                                <li><a href="javascript:void(0);">Career</a></li>
-                                <li><a href="javascript:void(0);">Blog</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__nav">
-                            <div class="es-footer__nav__title">Help</div>
-                            <ul class="es-footer__nav__list">
-                                <li><a href="javascript:void(0);">Support</a></li>
-                                <li><a href="javascript:void(0);">FAQ</a></li>
-                                <li><a href="javascript:void(0);">Bulk/Party Orders</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__nav">
-                            <div class="es-footer__nav__title">Terms</div>
-                            <ul class="es-footer__nav__list">
-                                <li><a href="javascript:void(0);"> Terms &amp; Conditions</a</li>
-                                <li><a href="javascript:void(0);"> Privacy Policy</a</li>
-                                <li><a href="javascript:void(0);"> Contact us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <a href="javascript:void(0);" class="es-footer__app-btn">
-                            <img src="images/pages/landing/footer-android--app.svg" alt="android store">
-                        </a>
-                        <a href="javascript:void(0);" class="es-footer__app-btn">
-                            <img src="images/pages/landing/footer-ios--app.svg" alt="app store">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="es-section--xs es-footer es-footer--base">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 es-footer--base__icon-wrap">
-                        <a href="javascript:void(0);" class="es-footer--base__icon">
-                          <svg class="icon icon-msg_btn">
-                            <use xlink:href="images/icons/icons-defs.svg#icon-facebook"></use>
-                          </svg>
-                        </a>
-                        <a href="javascript:void(0);" class="es-footer--base__icon">
-                          <svg class="icon icon-msg_btn">
-                            <use xlink:href="images/icons/icons-defs.svg#icon-instagram"></use>
-                          </svg>
-                        </a>
-                        <a href="javascript:void(0);" class="es-footer--base__icon">
-                          <svg class="icon icon-msg_btn">
-                            <use xlink:href="images/icons/icons-defs.svg#icon-twitter"></use>
-                          </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="text-center es-footer--base__address">Copyright © 2017 Fortyeighteast, L.L.C. All Rights Reserved.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
