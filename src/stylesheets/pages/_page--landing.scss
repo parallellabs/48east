@@ -88,10 +88,9 @@ $root          : #{$app-prefix};
   }
   &-layout {
     &-container {
-      margin-top: 64px;
-
+      // margin-top: 64px;
       @media (max-width: $break-point-xs-max) {
-        margin-top: 50px;
+        // margin-top: 50px;
       }
     }
   }

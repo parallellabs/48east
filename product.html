@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="build/css/app.css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body class="es-page es-page--product">
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  <nav class="navbar navbar-default" id="es-sticky-header-main">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-          <img src="images/logo.png" alt="48 easetlogo">
+      </button> -->
+      <a class="navbar-brand m-left" href="#">
+        <img src="images/logo.png" alt="48 easetlogo">
       </a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse pre-login-nav" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse pre-login-nav collapse in" id="bs-example-navbar-collapse-1">
       <div class="location-input">
         <input type="text" name="" value="" placeholder="Enter your delivery location">
         <div class="location-selected">
@@ -33,196 +33,201 @@
           <span>Marathahalli</span>
         </div>
       </div>
+      <a href="#" class="btn btn-primary es-btn--primary es-btn--cart" id="cart-btn">
+        <svg class="icon icon-cart-icon">
+          <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
+        </svg>
+        <span>2</span>
+      </a>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Log in</a></li>
-        <li>
-          <a href="#" class="btn btn-primary es-btn--primary">
-            <svg class="icon icon-cart-icon">
-              <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
-            </svg>
-            <span>2</span>
-          </a>
+        <li class="member-profile-menu dropdown">
+          <a href="#" class="member-name dropdown-toggle" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Bhaghya</a>
+          <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">My Orders</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
-    <div class="es-layout-container">
-        <div class="container">
+<div class="es-layout-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="es-box">
+          <div class="es-box__media"></div>
+          <div class="es-box__header">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="es-box">
-                        <div class="es-box__media"></div>
-                        <div class="es-box__header">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-9">
-                                    <div class="es-box__title large">Cantonese Braised Fish with Hunan Fried rice
-                                      <svg class="icon icon-non-veg-icon">
-                                        <use xlink:href="images/icons/icons-defs.svg#icon-non-veg-icon"></use>
-                                      </svg>
-                                    </div>
-                                    <div class="es-box__tag">
-                                        <div class="es-box__tag__item label label-default">Spicy</div>
-                                        <div class="es-box__tag__item label label-default">Sweet</div>
-                                        <div class="es-box__tag__item label label-default">Spicy</div>
-                                        <div class="es-box__tag__item label label-default">Sweet</div>
-                                    </div>
-                                    <div class="es-box__desc large">Peanut butter and crushed pepper glazed grilled chicken in freshly steamed bao bread with lettuce, pickled cucumber, cheese and black pepper spread.</div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3">
-                                    <div class="es-box__price">₹220</div>
-                                    <div class="btn btn-primary es-btn es-btn--primary es-btn--primary-cart pull-right">Add to Cart</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="es-box__body">
-                            <div class="es-box__content">
-                                <div class="row">
-                                    <div class="col-xs-12 col-sm-6 col-sm-push-6">
-                                        <img src="images/pages/product/map--asia.svg" alt="asia map">
-                                    </div>
-                                    <div class="col-xs-12 col-sm-6 col-sm-pull-6">
-                                        <div class="row">
-                                            <div class="col-xs-6 col-sm-6">
-                                                <div class="es-box__data">
-                                                    <div class="es-box__data__title">Ingredients</div>
-                                                    <ul class="es-box__data__list">
-                                                        <li class="es-box__data__list__item">Mustard</li>
-                                                        <li class="es-box__data__list__item">Rice</li>
-                                                        <li class="es-box__data__list__item">Curd</li>
-                                                        <li class="es-box__data__list__item">Chicken</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-6 col-sm-6">
-                                                <div class="es-box__data">
-                                                    <div class="es-box__data__title">Accompaniments</div>
-                                                    <ul class="es-box__data__list">
-                                                        <li class="es-box__data__list__item">Mustard</li>
-                                                        <li class="es-box__data__list__item">Rice</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="es-box es-box--notice">
-                        <div class="es-box__body">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="es-box__title">Food Allergy Notice</div>
-                                    <div class="es-box__desc large">Our meals are prepared in a kitchen environment that contains nuts, gluten, shellfish, and dairy. We use best practices when preparing our meals, however, inadvertent cross-contamination may occur. We cannot guarantee the complete absence of allergens. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food-borne illness.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="col-xs-12 col-sm-9">
+                <div class="es-box__title large">Cantonese Braised Fish with Hunan Fried rice
+                  <svg class="icon icon-non-veg-icon">
+                    <use xlink:href="images/icons/icons-defs.svg#icon-non-veg-icon"></use>
+                  </svg>
                 </div>
+                <div class="es-box__tag">
+                  <div class="es-box__tag__item label label-default">Spicy</div>
+                  <div class="es-box__tag__item label label-default">Sweet</div>
+                  <div class="es-box__tag__item label label-default">Spicy</div>
+                  <div class="es-box__tag__item label label-default">Sweet</div>
+                </div>
+                <div class="es-box__desc large">Peanut butter and crushed pepper glazed grilled chicken in freshly steamed bao bread with lettuce, pickled cucumber, cheese and black pepper spread.</div>
+              </div>
+              <div class="col-xs-12 col-sm-3">
+                <div class="es-box__price">₹220</div>
+                <div class="btn btn-primary es-btn es-btn--primary es-btn--primary-cart pull-right">Add to Cart</div>
+              </div>
             </div>
+          </div>
+          <div class="es-box__body">
+            <div class="es-box__content">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-push-6">
+                  <img src="images/pages/product/map--asia.svg" alt="asia map">
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-pull-6">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6">
+                      <div class="es-box__data">
+                        <div class="es-box__data__title">Ingredients</div>
+                        <ul class="es-box__data__list">
+                          <li class="es-box__data__list__item">Mustard</li>
+                          <li class="es-box__data__list__item">Rice</li>
+                          <li class="es-box__data__list__item">Curd</li>
+                          <li class="es-box__data__list__item">Chicken</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-6">
+                      <div class="es-box__data">
+                        <div class="es-box__data__title">Accompaniments</div>
+                        <ul class="es-box__data__list">
+                          <li class="es-box__data__list__item">Mustard</li>
+                          <li class="es-box__data__list__item">Rice</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <section class="es-section  es-section--xs es-section--news-letter">
-            <div class="container">
-                <div class="row-fluid">
-                    <div class="col-xs-12 col-sm-8">
-                        <h3 class="es-section__title">SIGN UP TO OUR NEWSLETTER</h3>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="form-horizontal">
-                            <div class="form-group">
-                                <div class="col-xs-12">
-                                    <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="Email Address">
-                                      <span class="input-group-btn">
-                                        <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
-                                          <svg class="icon icon-msg_btn">
-                                            <use xlink:href="images/icons/icons-defs.svg#icon-msg_btn"></use>
-                                          </svg>
-                                        </button>
-                                      </span>
-                                    </div><!-- /input-group -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="es-box es-box--notice">
+          <div class="es-box__body">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="es-box__title">Food Allergy Notice</div>
+                <div class="es-box__desc large">Our meals are prepared in a kitchen environment that contains nuts, gluten, shellfish, and dairy. We use best practices when preparing our meals, however, inadvertent cross-contamination may occur. We cannot guarantee the complete absence of allergens. Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food-borne illness.</div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="es-section  es-section--xs es-section--news-letter">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="col-xs-12 col-sm-8">
+          <h3 class="es-section__title">SIGN UP TO OUR NEWSLETTER</h3>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="form-horizontal">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Email Address">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default es-btn es-btn--primary es-btn--sm" type="button">
+                      <svg class="icon icon-msg_btn">
+                        <use xlink:href="images/icons/icons-defs.svg#icon-msg_btn"></use>
+                      </svg>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <section class="es-section es-section--footer es-footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__nav">
-                            <div class="es-footer__nav__title">ABOUT</div>
-                            <ul class="es-footer__nav__list">
-                                <li><a href="javascript:void(0);">About us</a></li>
-                                <li><a href="javascript:void(0);">Career</a></li>
-                                <li><a href="javascript:void(0);">Blog</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__nav">
-                            <div class="es-footer__nav__title">Help</div>
-                            <ul class="es-footer__nav__list">
-                                <li><a href="javascript:void(0);">Support</a></li>
-                                <li><a href="javascript:void(0);">FAQ</a></li>
-                                <li><a href="javascript:void(0);">Bulk/Party Orders</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <div class="es-footer__nav">
-                            <div class="es-footer__nav__title">Terms</div>
-                            <ul class="es-footer__nav__list">
-                                <li><a href="javascript:void(0);"> Terms &amp; Conditions</a</li>
-                                <li><a href="javascript:void(0);"> Privacy Policy</a</li>
-                                <li><a href="javascript:void(0);"> Contact us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-3">
-                        <a href="javascript:void(0);" class="es-footer__app-btn">
-                            <img src="images/pages/landing/footer-android--app.svg" alt="android store">
-                        </a>
-                        <a href="javascript:void(0);" class="es-footer__app-btn">
-                            <img src="images/pages/landing/footer-ios--app.svg" alt="app store">
-                        </a>
-                    </div>
-                </div>
+  <section class="es-section es-section--footer es-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3">
+          <div class="es-footer__nav">
+            <div class="es-footer__nav__title">ABOUT</div>
+            <ul class="es-footer__nav__list">
+              <li><a href="javascript:void(0);">About us</a></li>
+              <li><a href="javascript:void(0);">Career</a></li>
+              <li><a href="javascript:void(0);">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="es-footer__nav">
+            <div class="es-footer__nav__title">Help</div>
+            <ul class="es-footer__nav__list">
+              <li><a href="javascript:void(0);">Support</a></li>
+              <li><a href="javascript:void(0);">FAQ</a></li>
+              <li><a href="javascript:void(0);">Bulk/Party Orders</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+          <div class="es-footer__nav">
+            <div class="es-footer__nav__title">Terms</div>
+            <ul class="es-footer__nav__list">
+              <li><a href="javascript:void(0);"> Terms &amp; Conditions</a</li>
+                <li><a href="javascript:void(0);"> Privacy Policy</a</li>
+                  <li><a href="javascript:void(0);"> Contact us</a></li>
+                </ul>
+              </div>
             </div>
-        </section>
-        <section class="es-section--xs es-footer es-footer--base">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 es-footer--base__icon-wrap">
-                        <a href="javascript:void(0);" class="es-footer--base__icon">
-                          <svg class="icon icon-msg_btn">
-                            <use xlink:href="images/icons/icons-defs.svg#icon-facebook"></use>
-                          </svg>
-                        </a>
-                        <a href="javascript:void(0);" class="es-footer--base__icon">
-                          <svg class="icon icon-msg_btn">
-                            <use xlink:href="images/icons/icons-defs.svg#icon-instagram"></use>
-                          </svg>
-                        </a>
-                        <a href="javascript:void(0);" class="es-footer--base__icon">
-                          <svg class="icon icon-msg_btn">
-                            <use xlink:href="images/icons/icons-defs.svg#icon-twitter"></use>
-                          </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="text-center es-footer--base__address">Copyright © 2017 Fortyeighteast, L.L.C. All Rights Reserved.</div>
-                    </div>
-                </div>
+            <div class="col-xs-12 col-sm-3">
+              <a href="javascript:void(0);" class="es-footer__app-btn">
+                <img src="images/pages/landing/footer-android--app.svg" alt="android store">
+              </a>
+              <a href="javascript:void(0);" class="es-footer__app-btn">
+                <img src="images/pages/landing/footer-ios--app.svg" alt="app store">
+              </a>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+      <section class="es-section--xs es-footer es-footer--base">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 es-footer--base__icon-wrap">
+              <a href="javascript:void(0);" class="es-footer--base__icon">
+                <svg class="icon icon-msg_btn">
+                  <use xlink:href="images/icons/icons-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+              <a href="javascript:void(0);" class="es-footer--base__icon">
+                <svg class="icon icon-msg_btn">
+                  <use xlink:href="images/icons/icons-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+              <a href="javascript:void(0);" class="es-footer--base__icon">
+                <svg class="icon icon-msg_btn">
+                  <use xlink:href="images/icons/icons-defs.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="text-center es-footer--base__address">Copyright © 2017 Fortyeighteast, L.L.C. All Rights Reserved.</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
 
@@ -230,26 +235,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- <script src="build/js/48east.min.js"></script> -->
-    <script type="text/javascript">
-    $(document).ready(function() {
-      // Location input visible
-      $('.location-input .location-selected').on('click', function(){
-        $(this).hide();
-        $(this).siblings('input').focus();
-      });
-      // On press enter on input
-      $('.location-input input').keypress(function(e)
-       {
-          if (e.keyCode == '13') {
-            $(this).siblings('.location-selected').find('span').text($(this).val());
-            $(this).siblings('.location-selected').show();
+    <script src="build/js/vendors/jquery-scrolltofixed-min.js"></script>
+    <script src="build/js/vendors/svgxuse.min.js"></script>
+    <!-- Custom -->
+    <script src="build/js/48east.min.js"></script>
 
-            $(this).blur();
-          }
-        });
-      });
-    // end
-    </script>
-</body>
-</html>
+  </body>
+  </html>

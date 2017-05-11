@@ -1,0 +1,75 @@
+.sliding-panel-content {
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $sliding-panel-border-color: $dark-gray;
+  $sliding-panel-background: lighten($sliding-panel-border-color, 5%);
+  $sliding-panel-color: #fff;
+  $sliding-panel-border: 1px solid $sliding-panel-border-color;
+  $sliding-panel-background-hover: $action-color;
+  $sliding-panel-color-hover: #fff;
+  $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
+
+  @include position(fixed, 0 0 0 auto);
+
+  z-index: 999999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height:100%;
+  // background: $sliding-panel-background;
+  transition: all 0.25s linear;
+  transform: translateX(340px);
+
+  // ul {
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  // li {
+  //   list-style: none;
+  // }
+  // li a {
+  //   display: block;
+  //   padding: 1em;
+  //   border-bottom: $sliding-panel-border;
+  //   color: $sliding-panel-color;
+  //   text-decoration: none;
+  //   font-weight: bold;
+  //
+  //   &:focus {
+  //     background-color: $sliding-panel-background-focus;
+  //   }
+  //   &:hover {
+  //     background-color: $sliding-panel-background-hover;
+  //     color: $sliding-panel-color-hover;
+  //   }
+  // }
+  &.is-visible {
+    transform: translateX(0);
+  }
+}
+
+.sliding-panel-fade-screen {
+  @include position(fixed, 0);
+
+  z-index: 999998;
+  visibility: hidden;
+  background: black;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 0.4;
+  }
+}
+
+.sliding-panel-button {
+
+  outline: none;
+  cursor: pointer;
+
+  // img {
+  //   height: 1.3em;
+  // }
+}
+
+// Based on code by Diego Eis

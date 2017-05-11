@@ -41,6 +41,28 @@ $root         : #{$app-prefix}-btn;
     background: #fff !important;
     color: $btn-primary-color !important;
   }
+  &--cart{
+    padding:0 10px;
+    min-width:83px;
+    height:30px;
+    color:#fff;
+    line-height: 30px;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:visited {
+      border-color: darken($btn-primary-color, 10);
+      background: darken($btn-primary-color, 10);
+      color: white;
+    }
+    svg{
+      margin-right:10px;
+      width: 18px;
+      height: 16px;
+    }
+  }
   &-group {
     @include display(flex);
     @include align-items(center);

@@ -3,39 +3,59 @@
 $root     : #{$app-prefix}-tab;
 
 .#{$root} {
-  text-align: center;
-  padding-bottom: 15px;
-  // margin-bottom: 30px;
-  border-bottom: 1px solid #dadada;
   @include display(flex);
   @include flex-wrap(wrap);
   @include justify-content(space-around);
+
   padding: 16px 0;
+  padding-bottom: 15px;
+  // margin-bottom: 30px;
+  border-bottom: 1px solid #dadada;
+  text-align: center;
 
   &__item {
-    padding: 0 16px;
-    display: inline-block;
-    color: $type-secondary-color;
     position: relative;
-    font-size:18px;
+    display: inline-block;
+    padding: 0 16px;
 
-    &--active {
-      color: $type-primary-color;
-      font: {
-        weight: 600;
+    a{
+      padding:0 !important;
+      border:none !important;
+      color: $type-secondary-color;
+      font-size:18px;
+
+      &:hover,
+      &:focus{
+        background:none;
       }
+    }
+    &.active {
       left: 0;
 
+      & > a{
+        padding:0 !important;
+        border:none !important;
+        color: $type-primary-color;
+
+        font: {
+          weight: 600;
+        }
+        &:hover,
+        &:focus{
+          border:none !important;
+          background:none !important;
+        }
+      }
       &:after {
-        content: '';
-        display: block;
         position: absolute;
+        bottom: -16px;
+        left: 0;
+        display: block;
         width: 100%;
         height: 3px;
         border-radius: 4px;
         background: #fdc611;
-        left: 0;
-        bottom: -16px;
+        content: '';
       }
     }
   }

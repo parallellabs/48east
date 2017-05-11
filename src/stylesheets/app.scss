@@ -15,7 +15,7 @@
 @import "modules/m_icon";
 @import "modules/m_checkbox";
 @import "modules/m_tab";
-// @import "modules/sly-style.scss"
+@import "modules/slide-panel";
 
 // pages
 @import "pages/slider-style";
@@ -24,3 +24,6 @@
 @import "pages/page--order-confirmation";
 @import "pages/page--wallet";
 @import "pages/page--home";
+
+// Prefrances
+@import "modules/modals.scss";

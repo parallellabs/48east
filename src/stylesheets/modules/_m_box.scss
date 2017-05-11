@@ -139,7 +139,7 @@ $root      : #{$app-prefix}-box;
     }
   }
   &__body {
-    padding: 30px;
+    padding: 0 30px;
 
     @media (max-width: $break-point-xs-max) {
       padding: 10px;
@@ -253,6 +253,7 @@ $root      : #{$app-prefix}-box;
         @media (max-width: $break-point-xs-max) {
           padding: 10px;
         }
+
         p{
           color:#6f6f6f;
 
@@ -261,7 +262,6 @@ $root      : #{$app-prefix}-box;
             weight:400;
           }
         }
-
         h2{
           color:#424242;
 
@@ -337,9 +337,7 @@ $root      : #{$app-prefix}-box;
       &__header {
         background: #fff7dc;
       }
-      &__footer{
-        padding-bottom: 30px;
-      }
+
     }
   }
   &--inactive {
@@ -355,6 +353,9 @@ $root      : #{$app-prefix}-box;
         display: none;
       }
     }
+  }
+  &__footer{
+    padding-bottom: 30px;
   }
   &--filled {
     .#{$root} {

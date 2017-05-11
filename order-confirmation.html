@@ -7,23 +7,23 @@
   <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body class="es-page es-page--order-confirmation">
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default" id="es-sticky-header-main">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">
+        </button> -->
+        <a class="navbar-brand m-left" href="#">
           <img src="images/logo.png" alt="48 easetlogo">
         </a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse pre-login-nav" id="bs-example-navbar-collapse-1">
+      <div class="collapse navbar-collapse pre-login-nav collapse in" id="bs-example-navbar-collapse-1">
         <div class="location-input">
           <input type="text" name="" value="" placeholder="Enter your delivery location">
           <div class="location-selected">
@@ -33,16 +33,14 @@
             <span>Marathahalli</span>
           </div>
         </div>
+        <a href="#" class="btn btn-primary es-btn--primary es-btn--cart" id="cart-btn">
+          <svg class="icon icon-cart-icon">
+            <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
+          </svg>
+          <span>2</span>
+        </a>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#">Log in</a></li>
-          <li>
-            <a href="#" class="btn btn-primary es-btn--primary">
-              <svg class="icon icon-cart-icon">
-                <use xlink:href="images/icons/icons-defs.svg#icon-cart-icon"></use>
-              </svg>
-              <span>2</span>
-            </a>
-          </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -233,6 +231,7 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <!-- Latest compiled and minified JavaScript -->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="build/js/vendors/svgxuse.min.js"></script>
       <script src="build/js/48east.min.js"></script>
     </body>
     </html>

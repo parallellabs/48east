@@ -1,0 +1,26 @@
+// Modals custom style
+.login-modal{
+  .modal-content{
+    border:none;
+    background:none;
+
+    .modal-body{
+      padding:0;
+
+      .tab-content{
+        .es-link--password{
+          padding:20px;
+        }
+        .es-box__footer{
+          padding:0;
+
+          .es-box__cta{
+            margin:0;
+            height:60px;
+            line-height:60px;
+          }
+        }
+      }
+    }
+  }
+}

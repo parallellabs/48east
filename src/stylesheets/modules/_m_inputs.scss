@@ -1,3 +1,14 @@
+// Bootstrap overrides
+.form-group{
+  &:last-child{
+    margin-bottom:0;
+  }
+}
+
+.tab-content > .tab-pane{
+  border:none;
+}
+
 // modules/inputs
 
 $root        : #{$app-prefix}-input;
@@ -9,23 +20,30 @@ $root        : #{$app-prefix}-input;
       margin-top: 25px;
 
       &__input {
-        &:focus {
+        &:focus{
           border-color: #fdc611 !important;
 
           ~ label {
-            @include transform(scale(0.9));
-
+            top:-25px;
             left: 0;
             color: #fdc611;
           }
         }
+        &.valid {
+          border-color: #dadada !important;
+
+          ~ label {
+            top:-25px;
+            left: 0;
+            color: #b7b7b7;
+          }
+        }
       }
       &__label {
-        @include transform-origin(0 -1500%);
-        @include transition(transform 300ms ease, color 0.7s ease, left 0.2s ease);
+        @include transition(all 300ms ease, color 0.7s ease, left 0.2s ease, top 0.2s ease);
 
         position: absolute;
-        bottom: 2px;
+        top: 10px;
         left: 12px;
         color: #b7b7b7;
         pointer-events: none;
@@ -138,5 +156,32 @@ label {
     .form-control {
       border-color: #fdc611!important;
     }
+  }
+}
+
+.filter{
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  float: right;
+  margin: 0;
+  padding: 5px 0;
+  -webkit-transition: all ease 300ms;
+  -moz-transition: all ease 300ms;
+  -o-transition: all ease 300ms;
+  transition: all ease 300ms;
+
+  @media (min-width: $break-point-xs-max){
+    padding:0;
+  }
+
+  input{
+    margin-right:10px;
+    vertical-align: sub;
+  }
+  label{
+    margin: 0;
+    vertical-align: middle;
+    cursor:pointer;
   }
 }

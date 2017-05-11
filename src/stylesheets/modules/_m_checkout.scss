@@ -25,6 +25,7 @@ $root        : #{$app-prefix}-checkout;
   }
   &__close {
     color: #6f6f6f;
+    cursor:pointer;
   }
   &__like {
     position: relative;
