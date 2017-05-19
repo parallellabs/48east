@@ -37,6 +37,26 @@ $root         : #{$app-prefix}-btn;
     min-width:60px;
     height:40px;
   }
+  &--update{
+    display:block;
+    width: 170px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #c1272e;
+    color:#fff;
+    font-weight: 600;
+    font-size: 18px;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus,
+    &:visited {
+      border-color: darken($btn-primary-color, 10);
+      background: darken($btn-primary-color, 10);
+      color: white;
+    }
+  }
   &--add-to-cart {
     background: #fff !important;
     color: $btn-primary-color !important;
@@ -91,5 +111,22 @@ $root         : #{$app-prefix}-btn;
 
       text-align: center;
     }
+  }
+}
+
+.anchorBtn{
+  display: block;
+  margin-top:20px;
+  color: #c1272e;
+  text-align:center;
+  font-weight:400;
+  font-size: 14px;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus,
+  &:visited {
+    color: darken($btn-primary-color, 10);
   }
 }

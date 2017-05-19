@@ -122,10 +122,10 @@ $root        : #{$app-prefix}-input;
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  border-radius: 3px;
-
   font: {
+    border-radius: 3px;
     size: 16px;
+
   }
 }
 
@@ -146,15 +146,47 @@ label {
 .form-group {
   &--warning {
     label {
-      color: #fdc611;
-
       font: {
+        color: #fdc611;
         weight: 400;
         size: 14px;
+
       }
     }
     .form-control {
       border-color: #fdc611!important;
+    }
+  }
+  &.invalid{
+    .input-group{
+      input{
+        border-color:#c1272e;
+      }
+      .input-group-btn{
+        .btn{
+          outline: none;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+      .remove-promo{
+        position:absolute;
+        top:8px;
+        right: 70px;
+        z-index: 9;
+        cursor:pointer;
+
+        svg{
+          width: 8px;
+          height: 8px;
+        }
+      }
+    }
+    .error-msg{
+      margin-top:10px;
+      margin-bottom:0;
+      color:#c1272e;
+      font-size:12px;
     }
   }
 }
@@ -166,10 +198,10 @@ label {
   float: right;
   margin: 0;
   padding: 5px 0;
+  transition: all ease 300ms;
   -webkit-transition: all ease 300ms;
   -moz-transition: all ease 300ms;
   -o-transition: all ease 300ms;
-  transition: all ease 300ms;
 
   @media (min-width: $break-point-xs-max){
     padding:0;

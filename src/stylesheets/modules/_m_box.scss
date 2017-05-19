@@ -35,6 +35,11 @@ $root      : #{$app-prefix}-box;
   }
   &--order{
     margin-bottom:60px;
+
+    .es-box__body{
+      padding-top:30px;
+      padding-bottom:30px;
+    }
   }
   &__media {
     height: 500px;
@@ -243,6 +248,10 @@ $root      : #{$app-prefix}-box;
         margin-top: 0;
         color: #888;
       }
+      &__body{
+        padding-top:30px;
+        padding-bottom:30px;
+      }
     }
   }
   &--minimal {
@@ -281,7 +290,7 @@ $root      : #{$app-prefix}-box;
             padding-right: 30px;
             width:100%;
             height: 40px;
-            border: solid 1px #888888;
+            border: solid 1px #dadada;
             border-radius: 3px;
             color:#424242;
             text-align:left;

@@ -1,0 +1,612 @@
+.vertical-tabs-container {
+  $base-border-color: rgba(0,0,0,0.1) !default;
+  $base-border-radius: 3px !default;
+  $base-background-color: #f8f8f8 !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477dca !default;
+  $dark-gray: #6f6f6f !default;
+  $medium-screen: 40em !default;
+  $base-font-color: $dark-gray !default;
+  $tab-border-color: $base-border-color;
+  $tab-border: 1px solid $tab-border-color;
+  $tab-border-radius: $base-border-radius;
+  $tab-content-background: #fff;
+  $tab-active-color: $tab-content-background;
+  $tab-inactive-color: $base-background-color;
+  $vertical-tabs-height: 18.75em;
+
+  overflow: hidden;
+  margin-bottom: $base-spacing;
+  border-radius: $tab-border-radius;
+  // $vertical-tab-mode: 768px;
+  background-color: #fff;
+  // border: $tab-border;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+  li {
+    list-style: none;
+  }
+  a {
+    // color: $action-color;
+    text-decoration: none;
+  }
+  .vertical-tabs {
+    // display: none;
+    @media (max-width: 768px){
+      overflow-x:scroll;
+      padding:0 20px;
+      width:100%;
+      height: 65px;
+      border-bottom:1px solid rgba(0,0,0,0.1);
+      white-space:nowrap;
+      line-height: 65px;
+    }
+    @media (min-width: 768px) {
+      display: inline;
+      float: left;
+      width: 25%;
+      height: $vertical-tabs-height;
+      background-color: $tab-inactive-color;
+    }
+  }
+  .vertical-tab {
+    @media (min-width: 768px){
+      display: block;
+      margin-right: -1px;
+      padding: 15px 20px;
+      height: 55px;
+      border-bottom: $tab-border;
+      font-weight: bold;
+
+      &.is-active {
+        margin-right: -1px;
+        border-bottom:1px solid #fdc611;
+        background-color: $tab-content-background;
+        color:#424242;
+        font-weight:600;
+      }
+    }
+  }
+  a.vertical-tab-accordion-heading,
+  a.vertical-tab {
+    color: $dark-gray;
+
+    @media (max-width: 768px){
+      position: relative;
+      margin-right:20px;
+      background-color: white;
+      color: rgba(111, 111, 111, 0.8);
+      font-weight: 600;
+
+      &.is-active{
+        color:#424242;
+
+        .wallet-balance{
+          color:#424242;
+        }
+        &:after{
+          position: absolute;
+          bottom: -22px;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background: #fdc611;
+          content: '';
+        }
+      }
+
+    }
+
+    font:{
+      weight:400;
+      size:16px;
+    }
+    .wallet-balance{
+      float:right;
+      color:#424242;
+
+      @media (max-width: 768px){
+        float:none;
+        color: rgba(111, 111, 111, 0.8);
+      }
+
+      font:{
+        size:16px;
+        weight:600
+      }
+    }
+
+  }
+  .vertical-tab:focus {
+    outline: none;
+  }
+  .vertical-tab-content-container {
+    display: block;
+    margin: 0 auto;
+
+    @media(min-width: 768px){
+      display: inline-block;
+      width:75%;
+      background-color: $tab-content-background;
+    }
+
+    & a:focus {
+      outline: none;
+    }
+  }
+  .vertical-tab-content {
+    padding: 15px 30px 30px 30px;
+    background-color: $tab-content-background;
+
+    @media (max-width: 768px){
+      padding:15px;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+    }
+  }
+  .vertical-tab-accordion-heading {
+    display: block;
+    padding: 10px 20px;
+    border-top: $tab-border;
+    background-color: $tab-inactive-color;
+    font-weight: bold;
+    cursor: pointer;
+
+    @media(min-width: 768px){
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: $action-color;
+    }
+    &:first-child {
+      border-top: 0;
+    }
+    &.is-active {
+      border-bottom: 0;
+      background: $tab-active-color;
+
+      & + .vertical-tab-content{
+        display:inline-block !important;
+        width:100%;
+      }
+    }
+  }
+}
+
+// Based on code by Jett Miller jettmiller.net
+
+// customised style
+.vertical-tabs-container {
+  display: table;
+  width: 100%;
+
+  @media (max-width: 768px){
+    display:block;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .vertical-tabs{
+    @media (min-width: 768px){
+      display: table-cell;
+      float: none;
+      vertical-align:top;
+    }
+  }
+  .vertical-tab-content-container{
+    display: table-cell;
+    float: none;
+
+    @media (max-width: 768px){
+      display:block;
+      width:100%;
+    }
+
+    .vertical-tab-content{
+      .title{
+        margin-top:0;
+        margin-bottom:30px;
+        padding-bottom:15px;
+        border-bottom:1px solid rgba(0,0,0,0.1);
+        color:#424242;
+
+        font:{
+          size:22px;
+          weight:600;
+        }
+      }
+      form{
+        & > div{
+          padding:0;
+
+          &.col-sm-6{
+            margin-bottom:30px;
+            padding-right:0;
+
+            @media (min-width: 768px){
+              padding-right:30px;
+
+              &:nth-child(2n){
+                padding-right:0;
+              }
+            }
+          }
+        }
+      }
+      .address-grp{
+        & > div{
+          margin-bottom:30px;
+          padding:0;
+
+          @media (min-width: 768px){
+            padding-right:30px;
+
+            &:nth-child(2n){
+              padding-right:0;
+            }
+          }
+
+          .address-box{
+            float:left;
+            padding:20px;
+            width:100%;
+            height:150px;
+            border-radius: 3px;
+            background-color: #f8f8f8;
+
+            h3{
+              position:relative;
+              margin-top:0;
+              margin-bottom:20px;
+              padding-right:40px;
+              width:100%;
+              color:#424242;
+
+              svg{
+                position:absolute;
+                top: 5px;
+                right:0;
+                width: 18px;
+                height: 18px;
+                color: #c1272e;
+                cursor:pointer;
+              }
+              font:{
+                weight:600;
+                size:16px;
+              }
+              p{
+                margin:0;
+                color:#6f6f6f;
+
+                font:{
+                  weight:400;
+                  size:14px;
+                }
+              }
+            }
+            &.add{
+              text-align: center;
+              line-height: 110px;
+              cursor:pointer;
+
+              span{
+                color:#c1272e;
+                vertical-align:middle;
+                font-weight: 600;
+                font-size: 14px;
+
+                svg{
+                  margin-right:10px;
+                  width: 18px;
+                  height: 18px;
+                  vertical-align: middle;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// My order style
+.my-orders{
+  .o-row{
+    margin-right:0;
+    margin-bottom:20px;
+    margin-left:0;
+    // padding:20px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
+
+    &:last-child{
+      margin-bottom:0;
+    }
+    .o-sub-row{
+      margin-bottom: 20px;
+      padding: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      @media (max-width: 768px){
+        margin-bottom:0;
+      }
+
+      .row{
+        margin-right:0;
+        margin-left:0;
+
+        &:nth-of-type(1){
+          margin-bottom: 15px;
+        }
+        &:nth-of-type(2){
+          margin-bottom: 5px;
+        }
+        & > div{
+          padding:0;
+
+          @media (max-width: 480px){
+            width:100%;
+            text-align: left;
+          }
+        }
+        .o-col{
+          padding:0;
+
+          .o-label{
+            color:#b7b7b7;
+            font-weight: 400;
+            font-size: 16px;
+          }
+          .id{
+            color:#6f6f6f;
+            font-weight: 600;
+            font-size: 16px;
+          }
+          .tag{
+            color:#fdc611;
+            font-weight: 600;
+            font-size: 16px;
+
+            &.green{
+              color: #49a942;
+            }
+            &.red{
+              color: #a31c22;
+            }
+            &:before{
+              display:inline-block;
+              margin: 0 5px;
+              width: 4px;
+              height: 4px;
+              border-radius:50%;
+              background-color:#6f6f6f;
+              content:"";
+              vertical-align:middle;
+            }
+          }
+          .time,.date{
+            color:#888;
+          }
+          .detail,.amount{
+            color:#424242;
+          }
+        }
+        &.total-amt{
+          display:none;
+        }
+      }
+      .drop-arrow{
+        display:none;
+      }
+      .address-details{
+        padding:20px;
+        background-color: #f8f8f8;
+
+        @media (max-width: 768px){
+          margin-bottom: 20px;
+        }
+
+        .detail-box{
+          margin-bottom:20px;
+
+          &:last-child{
+            margin-bottom:0;
+          }
+          h3{
+            margin-top:0;
+            margin-bottom:5px;
+            color: #6f6f6f;
+            font-weight: 600;
+            font-size: 14px;
+          }
+          p{
+            margin:0;
+            color: #6f6f6f;
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+      .amount-split{
+        text-align:right;
+
+        .split{
+          margin-bottom:5px;
+
+          span{
+            margin-right:30px;
+            color:#888;
+
+            font:{
+              size:14px;
+              weight:400;
+            }
+            &:last-child{
+              margin-right:0;
+            }
+          }
+          &.grand-total{
+            margin-top:50px;
+            margin-bottom:0;
+
+            span{
+              color:#6f6f6f;
+
+              font:{
+                weight:600;
+                size:16px;
+              }
+            }
+          }
+        }
+      }
+      &.collapse.in{
+        margin-bottom:0;
+        padding-bottom:0;
+        border-bottom:none;
+      }
+      &.collapsed{
+        position:relative;
+        margin-bottom:0;
+        padding-right: 40px;
+        padding-bottom:20px;
+        border-bottom:none;
+
+        .row:not(:first-child){
+          display:none;
+
+          &.total-amt{
+            display:block;
+
+            .amount-split{
+              .split{
+                &.grand-total{
+                  margin-top:0;
+                }
+              }
+            }
+          }
+        }
+        .drop-arrow{
+          @include transform(translateY(-50%));
+
+          position: absolute;
+          top: 50%;
+          right: 12px;
+          display:block;
+
+          svg{
+            width: 14px;
+            color:#c1272e;
+
+            path{
+              fill: #c1272e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// My wallet
+.wallet-details{
+  .row{
+    & > div{
+      display:inline-block;
+      float:none;
+      margin-right:-4px;
+      vertical-align:middle;
+
+      @media (max-width: 768px){
+        margin-bottom:20px;
+
+        &:last-child{
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+  .enter-amount{
+    margin-bottom:47px;
+
+    .w-logo-img{
+      display:inline-block;
+      margin-right:10px;
+      width: 54px;
+      height: 54px;
+      border-radius:6px;
+      vertical-align:middle;
+    }
+    .w-amt{
+      display:inline-block;
+      vertical-align:middle;
+
+      span{
+        display:block;
+        color: #6f6f6f;
+        font-weight:400;
+        font-size: 12px;
+
+        &:last-child{
+          color:#424242;
+          font-weight:600;
+          font-size:24px;
+        }
+      }
+    }
+  }
+  .w-history{
+    margin-right:0;
+    margin-left:0;
+
+    .sub-row{
+      margin-bottom:15px;
+      padding-bottom:15px;
+      width: 100%;
+      border-bottom:1px solid rgba(0,0,0,0.1);
+
+      .transection{
+        .detail{
+          color: #6f6f6f;
+          font-weight: 400;
+          font-size: 16px;
+
+          @media (max-width: 768px){
+            margin-bottom:0;
+          }
+        }
+        .amount{
+          text-align:right;
+
+          font:{
+            weight:600;
+            size:16px;
+          }
+          &.credit{
+            color:#49a942;
+          }
+          &.debit{
+            color:#c1272e;
+          }
+        }
+        .transec-time{
+          color:#888;
+          font-weight: 400;
+          font-size:14px;
+        }
+      }
+    }
+  }
+}

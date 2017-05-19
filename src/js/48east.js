@@ -55,9 +55,30 @@ $(document).ready(function(){
     e.preventDefault();
   });
 
+  // rating
+
+  var logID = 'log';
+  $('.rating').each(function(i){
+    var log = $('<div class="log" id="log-'+i+'"></div>');
+    $(this).append(log);
+    $(this).find('[type*="radio"]').change(function () {
+      var me = $(this);
+      log.html(me.attr('value'));
+    });
+  });
+
+  // end
+
   // FLoting input valid state
   $('input').each(function(){
-    if($(this).val()){
+    if($(this).val() || $(this).numeric()){
+      $(this).addClass('valid');
+    }else{
+      $(this).removeClass('valid');
+    }
+  });
+  $('input').on('change', function(){
+    if($(this).val() || $(this).numeric()){
       $(this).addClass('valid');
     }else{
       $(this).removeClass('valid');

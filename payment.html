@@ -197,44 +197,33 @@
         </div>
         <div class="col-xs-12 col-sm-4">
           <div class="es-box es-box--minimal es-box--depth-2">
-            <div class="es-box__header es-box__header--has-tab">
-              <div class="es-tab">
-                <div class="es-tab__item">
-                  Deliver Now
-                </div>
-                <div class="es-tab__item es-tab__item--active">
-                  Deliver Later
-                </div>
-              </div>
-            </div>
-            <div class="es-box__body">
-              <div class="dropdown select-dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  Select your delivery slot
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="#"><span>9:00 - 9:30 PM</span></a></li>
-                  <li><a href="#"><span>9:30 - 10:00 PM</span></a></li>
-                  <li><a href="#"><span>10:30 - 11:00 PM</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="es-box es-box--minimal es-box--depth-2">
-            <div class="es-box__header es-box__header--has-tab">
-              <div class="es-tab">
-                <div class="es-tab__item es-tab__item--active">
-                  Deliver Now
-                </div>
-                <div class="es-tab__item">
-                  Deliver Later
+            <ul class="nav nav-tabs es-box__header es-box__header--has-tab es-tab" role="tablist">
+              <li role="presentation" class="es-tab__item active">
+                <a href="#d-now" aria-controls="d-now" role="tab" data-toggle="tab">Deliver Now</a>
+              </li>
+              <li role="presentation" class="es-tab__item">
+                <a href="#d-later" aria-controls="d-later" role="tab" data-toggle="tab">Deliver Later</a>
+              </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+              <div class="es-box__body tab-pane fade in active" id="d-now">
+                <div class="dropdown select-dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Select your delivery slot
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="#"><span>9:00 - 9:30 PM</span></a></li>
+                    <li><a href="#"><span>9:30 - 10:00 PM</span></a></li>
+                    <li><a href="#"><span>10:30 - 11:00 PM</span></a></li>
+                  </ul>
                 </div>
               </div>
-            </div>
-            <div class="es-box__body">
-              <p class="text-center">Your delivery will arrive between</p>
-              <h2 class="text-center">9:00 - 9:30PM</h2>
+              <div class="es-box__body tab-pane fade" id="d-later">
+                <p class="text-center">Your delivery will arrive between</p>
+                <h2 class="text-center">9:00 - 9:30PM</h2>
+              </div>
             </div>
           </div>
 
@@ -297,6 +286,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="build/js/vendors/jquery-scrolltofixed-min.js"></script>
   <script src="build/js/vendors/svgxuse.min.js"></script>
   <script src="build/js/48east.min.js"></script>
 </body>

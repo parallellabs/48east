@@ -42,7 +42,7 @@ $tab-item-bg   : #fff;
     -ms-overflow-style: none;  // IE 10+
 
     &::-webkit-scrollbar {
-        display: none;
+      display: none;
     }
 
   }
@@ -184,4 +184,165 @@ $tab-item-bg   : #fff;
   @media (min-width: $break-point-xs-max){
     top:0 !important;
   }
+}
+
+// Feedback
+.feedback{
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  z-index:16;
+  padding:15px;
+  width: 340px;
+  height: 496px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px){
+    width: 100%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    overflow-y: scroll;
+  }
+
+  .row{
+    margin-right:0;
+    margin-left:0;
+
+    .title{
+      margin-top:0;
+      margin-bottom:15px;
+      padding-right:80px;
+      padding-bottom:15px;
+      border-bottom:1px solid #e3e3e3;
+      color: #424242;
+      font-weight: 600;
+      font-size: 16px;
+
+      .anchorBtn{
+        float:right;
+        margin-top: 2px;
+        margin-right: -80px;
+      }
+    }
+    .form-group{
+      textarea{
+        padding:12px;
+        height:100px;
+        font-size:16px;
+        resize:none;
+      }
+    }
+    .es-box__cta{
+      margin:0;
+    }
+  }
+  .my-orders{
+    .o-row{
+      border:none;
+
+      .o-sub-row{
+        padding:0;
+
+        .row{
+          margin-bottom:0;
+
+          .o-col{
+            margin-bottom:15px;
+
+            .date, .time{
+              font-size:12px;
+            }
+            .amount{
+              font-weight:600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+$unchecked-color: #e9e9e9;
+$checked-color: #fdc611;
+
+.rating{
+  .heading{
+    margin-bottom:5px;
+    color:#424242;
+
+    font:{
+      size:14px;
+    }
+  }
+  .radio-grp {
+    display: inline-block;
+    overflow:hidden;
+    margin-left: -5px;
+    height: 25px;
+    /* remove inline-block whitespace */
+    font-size: 0;
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+
+    & > input {
+      display: none;
+
+      & + label {
+        /* only enough room for the star */
+        display: inline-block;
+        overflow: hidden;
+        margin-right: 5px;
+        white-space: nowrap;
+        cursor: pointer;
+
+        svg {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          color: $unchecked-color;
+
+        }
+      }
+      &:checked ~ label svg,
+      & + label:hover ~ label svg,
+      & + label:hover svg {
+        color: $checked-color;
+        text-shadow: 0 0 1px #333;
+      }
+    }
+    /* the hidden clearer */
+    & > .star-cb-clear + label {
+      margin-left: -.5em;
+      width: .5em;
+
+    }
+    // & > .star-cb-clear + label svg {
+    //   width: .5em;
+    // }
+    &:hover > input + label svg {
+      color: $unchecked-color;
+      text-shadow: none;
+    }
+    &:hover > input + label:hover ~ label svg,
+    &:hover > input + label:hover svg{
+      color: $checked-color;
+      text-shadow: 0 0 1px #333;
+    }
+  }
+}
+
+// extra styles
+.log {
+  display: inline-block;
+  margin-left:60px;
+  background: transparent;
+  vertical-align: top;
+  text-align: center;
+  font-size:16px;
 }
