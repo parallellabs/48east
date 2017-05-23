@@ -1,0 +1,118 @@
+.invites{
+  margin-top:30px;
+
+  @media (max-width:768px){
+    margin-top:20px;
+  }
+
+  .invite-card{
+    margin:0 auto;
+    margin-bottom:60px;
+    padding:20px;
+    max-width:1000px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+  .row{
+    margin:0 auto;
+    max-width:525px;
+  }
+  .title{
+    margin-bottom:20px;
+    color: #424242;
+    text-align:center;
+    font-family:$type-secondary;
+
+    font:{
+      size:22px;
+      weight:bold;
+    }
+  }
+  .icon-image{
+    margin:0 auto;
+    margin-bottom:60px;
+    width: 200px;
+    height: 200px;
+  }
+  .sub-title{
+    margin-bottom:20px;
+    color: #424242;
+    text-align:center;
+
+    font:{
+      size:22px;
+      weight:600;
+    }
+  }
+  p.msg{
+    margin-bottom:40px;
+    color:#424242;
+    text-align:center;
+
+    font:{
+      size:18px;
+      weight:400;
+    }
+  }
+  .input-group{
+    margin-bottom:30px;
+  }
+  .socials{
+    text-align:center;
+
+    a{
+      margin-right:auto;
+      margin-bottom:20px;
+      margin-left:auto;
+      max-width:316px;
+
+      svg{
+        margin-right:20px;
+        width: 20px;
+        height: 20px;
+        color:rgba(0,0,0,0.5);
+
+        &:hover{
+          color:#000;
+        }
+      }
+      &:last-child{
+        svg{
+          margin-right:0;
+        }
+      }
+
+    }
+  }
+  .form-horizontal{
+    margin-bottom:30px;
+
+    .form-group{
+      .form-control{
+        background-color:transparent;
+      }
+    }
+  }
+  .es-btn--primary{
+    margin-right:auto;
+    margin-bottom: 40px;
+    margin-left:auto;
+    &.es-btn--sm{
+      margin-bottom:0;
+    }
+  }
+  p.note{
+    margin-bottom:80px;
+    color:#888;
+    text-align:center;
+
+    &:last-child{
+      margin-bottom:12px;
+    }
+    font:{
+      size:14px;
+      weight:400;
+    }
+  }
+}

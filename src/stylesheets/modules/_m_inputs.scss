@@ -3,6 +3,15 @@
   &:last-child{
     margin-bottom:0;
   }
+  .half{
+    @media (max-width: 768px){
+      margin-bottom:15px;
+
+      &:last-child{
+        margin-bottom:0;
+      }
+    }
+  }
 }
 
 .tab-content > .tab-pane{

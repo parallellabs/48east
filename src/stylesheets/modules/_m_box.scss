@@ -365,10 +365,17 @@ $root      : #{$app-prefix}-box;
   }
   &__footer{
     padding-bottom: 30px;
+
+    @media (max-width: 768px){
+      .es-box__cta{
+        margin:0 10px;
+      }
+    }
   }
   &--filled {
     .#{$root} {
       &__title {
+        margin-bottom:0;
         color: #6f6f6f;
       }
       &__desc {

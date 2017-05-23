@@ -71,14 +71,14 @@ $(document).ready(function(){
 
   // FLoting input valid state
   $('input').each(function(){
-    if($(this).val() || $(this).numeric()){
+    if($(this).val() || $.isNumeric(this)){
       $(this).addClass('valid');
     }else{
       $(this).removeClass('valid');
     }
   });
   $('input').on('change', function(){
-    if($(this).val() || $(this).numeric()){
+    if($(this).val() || $.isNumeric(this)){
       $(this).addClass('valid');
     }else{
       $(this).removeClass('valid');

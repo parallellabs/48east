@@ -93,11 +93,28 @@ $root         : #{$app-prefix}-btn;
 
     &--default {
       border: solid 1px #b7b7b7;
+      background-color:#fff;
       color: #888888;
+
+      &:hover{
+        color:#888888;
+      }
     }
     &--fb {
       background: $brand-fb;
       color: #fff;
+
+      &:hover{
+        color:#fff;
+      }
+    }
+    &--mail {
+      background: #c1272e;
+      color: #fff;
+
+      &:hover{
+        color:#fff;
+      }
     }
     &__icon {
       svg {
