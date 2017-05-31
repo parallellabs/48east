@@ -71,14 +71,18 @@ $root        : #{$app-prefix}-input;
       }
 
       .input-group-btn {
-        @media (max-width: $break-point-xs-max) {
-          display: none;
-        }
-
         .btn{
           min-width: auto;
           width: 134px;
           height:60px;
+
+          @media (max-width: $break-point-xs-max) {
+            width: 110px;
+            height:40px;
+
+            // border-top-right-radius: px;
+            // border-bottom-right-radius: 3px;
+          }
         }
 
       }
@@ -86,10 +90,9 @@ $root        : #{$app-prefix}-input;
         height:60px;
 
         @media (max-width: $break-point-xs-max) {
-          border: {
-            top-right-radius: 3px !important;
-            bottom-right-radius: 3px !important;
-          }
+          height:40px;
+          border-top-right-radius: 0 !important;
+          border-bottom-right-radius: 0 !important;
         }
       }
     }
@@ -104,11 +107,16 @@ $root        : #{$app-prefix}-input;
 
 // bootstrap override
 .form-control {
+  display: inline-block !important;
+  margin-right: -4px;
   height: 40px;
+  outline:none;
   border-color: #dadada;
   border-radius: 3px;
   box-shadow: none;
   color: #424242;
+  vertical-align: middle;
+  -webkit-appearance: none;
 
   input::-webkit-input-placeholder {
     color: #424242;
@@ -212,17 +220,26 @@ label {
   -moz-transition: all ease 300ms;
   -o-transition: all ease 300ms;
 
-  @media (min-width: $break-point-xs-max){
+  @media (min-width: $break-point-sm){
     padding:0;
   }
 
   input{
+    margin-top:0;
     margin-right:10px;
-    vertical-align: sub;
+    vertical-align: middle;
   }
   label{
     margin: 0;
     vertical-align: middle;
     cursor:pointer;
+  }
+  &.mobi{
+    position: static;
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 200px;
+    text-align: center;
   }
 }

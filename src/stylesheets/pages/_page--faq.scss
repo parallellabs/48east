@@ -1,0 +1,121 @@
+.top-banner{
+  &.small{
+    height: 300px;
+    text-align: center;
+
+    .title{
+      @include prefixer(transform, translate(-50%, -50%), webkit moz ms spec);
+
+      position:absolute;
+      top:50%;
+      left:50%;
+      z-index:2;
+      margin-top:0;
+      padding:0 20px;
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      font-size: 3rem;
+      font-family: $type-secondary;
+      line-height: 1.33;
+
+      @media (max-width: $break-point-xs-max){
+        width:100%;
+        font-size:2rem;
+      }
+    }
+  }
+}
+.faq{
+  margin-top:50px;
+
+  @media (max-width: 768px){
+    margin-top:50px;
+  }
+
+  h1{
+    margin-top:0;
+    margin-bottom:100px;
+
+    @media (max-width: 768px){
+      margin-bottom:60px;
+    }
+  }
+  .faq-accordion{
+    .panel-default{
+      border:none;
+      background:none;
+      box-shadow:none;
+
+      .panel-heading{
+        margin:0;
+        padding:0;
+        border:none;
+        background:none;
+
+        .panel-title{
+          a{
+            position:relative;
+            display: inline-block;
+            padding-bottom:10px;
+            padding-left: 20px;
+            width: 100%;
+            border:none;
+            border-bottom:1px solid #fdc611;
+            color:#424242;
+
+            font:{
+              size:22px;
+              weight:400;
+            }
+            span{
+              position:absolute;
+              left:0;
+              color: #c1272e;
+
+              // line-height: 1.55;
+              &.minus{
+                top: -5px;
+                font-size:32px;
+              }
+              &.plus{
+                display:none;
+              }
+            }
+            &.collapsed{
+              margin-bottom: 40px;
+              border-bottom:1px solid rgba(0,0,0,0.1);
+
+              span{
+                display:none;
+
+                &.plus{
+                  display:inline;
+                }
+              }
+            }
+          }
+        }
+
+      }
+      .panel-collapse{
+        .panel-body{
+          padding:20px 0 40px;
+          border-top:none;
+          color:#888;
+
+          font:{
+            size:18px;
+            weight:400;
+          }
+        }
+        &.in{
+          .panel-body{
+
+
+          }
+        }
+      }
+    }
+  }
+}

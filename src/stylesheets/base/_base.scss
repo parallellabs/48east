@@ -12,6 +12,9 @@ body {
     size: 16px;
   }
 }
+body{
+  -webkit-overflow-scrolling:touch;
+}
 
 .col-centered{
   float: none;

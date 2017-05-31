@@ -40,6 +40,11 @@ $root       : #{$app-prefix}-checkbox;
     // margin-left: 30px;
     cursor: pointer;
 
+    .label-text{
+      color:#424242;
+      font-weight:600;
+      font-size:16px;
+    }
     .#{$app-prefix} {
       &-icon {
         margin-right: 10px;
@@ -69,7 +74,7 @@ $root       : #{$app-prefix}-checkbox;
     color: $type-secondary-color;
 
     &--first-child {
-      padding-top: 30px;
+      // padding-top: 30px;
     }
     &--last-child {
       padding-bottom: 0;

@@ -154,3 +154,30 @@
     }
   }
 }
+
+#videoModal{
+  .close{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    color: #fff;
+    font-size: 56px;
+    line-height: 28px;
+    opacity: 1;
+  }
+  .modal-dialog{
+    @include prefixer(transform, translateY(-50%), webkit moz ms spec);
+
+    top:50%;
+  }
+  .modal-content{
+    border: none;
+    background:none;
+    box-shadow:none;
+
+    .modal-body{
+      padding:0;
+    }
+  }
+}

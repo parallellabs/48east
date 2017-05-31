@@ -276,13 +276,13 @@
     .owl-prev{
       position:absolute;
       top:50%;
-      left:-55px;
+      left:-35px;
       -webkit-transform:translateY(-50%);
       -moz-transform:translateY(-50%);
       transform:translateY(-50%);
 
       @media (max-width: 768px) {
-        left:-25px;
+        left:-5px;
       }
 
       svg{
@@ -292,13 +292,13 @@
     .owl-next{
       position:absolute;
       top:50%;
-      right:-55px;
+      right:-35px;
       -webkit-transform:translateY(-50%);
       -moz-transform:translateY(-50%);
       transform:translateY(-50%);
 
       @media (max-width: 768px) {
-        right:-25px;
+        right:-5px;
       }
 
       svg{
@@ -338,10 +338,10 @@
         height:inherit;
 
         .owl-item{
+          @include prefixer(transform, translateY(-50%), webkit moz ms spec);
+
           top:50%;
-          -webkit-transform:translateY(-50%);
-          -moz-transform:translateY(-50%);
-          transform:translateY(-50%);
+          padding: 0 20px;
         }
       }
     }

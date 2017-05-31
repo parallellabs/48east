@@ -22,3 +22,24 @@ $page       : #{$app-prefix}-page--wallet;
     }
   }
 }
+
+.#{$app-prefix} {
+  &-layout-container{
+    .container{
+      .row{
+        & > div{
+          @media (max-width: 768px){
+            &.col-sm-8,
+            &.col-sm-6{
+              width:100%;
+            }
+            &.col-sm-4{
+              width:100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

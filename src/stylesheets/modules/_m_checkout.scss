@@ -16,6 +16,10 @@ $root        : #{$app-prefix}-checkout;
   background: white;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
 
+  @media (min-width: 520px) and (max-width: $break-point-sm){
+    max-width:380px;
+  }
+
   &__header {
     margin-bottom: 20px;
     padding: 20px 0;
@@ -76,10 +80,18 @@ $root        : #{$app-prefix}-checkout;
       background-position: 50% 50%;
       background-size: cover;
       background-repeat: no-repeat;
+
+      @media (min-width: 520px) and (max-width: $break-point-sm){
+        max-width:200px;
+      }
     }
     &__content {
       float: left;
       width: calc(50% - 30px);
+
+      @media (min-width: 520px) and (max-width: $break-point-sm){
+        width: calc(100% - 230px);
+      }
     }
     &__title {
       margin-bottom: 5px;

@@ -9,8 +9,8 @@
 </head>
 <body class="es-page es-page--home">
 
-  <div class="body-overlay"></div>
   <nav class="navbar navbar-default" id="es-sticky-header-main">
+    <div class="body-overlay"></div>
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -35,6 +35,12 @@
           </svg>
           <span>Marathahalli</span>
         </div>
+        <ul class="suggestions">
+          <li>Jp Nagar</li>
+          <li>Jayanagar</li>
+          <li>Indranagar</li>
+          <li>HSR Layout</li>
+        </ul>
       </div>
       <a href="#" class="btn btn-primary es-btn--primary es-btn--cart" id="cart-btn">
         <svg class="icon icon-cart-icon">
@@ -98,13 +104,17 @@
     <div class='al-tab__item al-tab__item--5'>
       Desserts
     </div>
-    <div class="filter hidden-xs">
+    <div class="filter hidden-xs hidden-sm">
       <input type="checkbox" name="veg" id="vegOnly">
       <label for="vegOnly">Vegetarian dishes </label>
     </div>
   </div>
 </div>
 
+<div class="filter hide visible-xs visible-sm mobi">
+  <input type="checkbox" name="veg" id="vegOnly1">
+  <label for="vegOnly1">Vegetarian dishes </label>
+</div>
 <section class="es-section es-section--home">
   <div class="container">
     <div class="row">
@@ -298,7 +308,7 @@
                     <a href="#m-login" aria-controls="profile" role="tab" data-toggle="tab">Login</a>
                   </li>
                   <li role="presentation" class="es-tab__item">
-                    <a href="#m-signUp" aria-controls="profile" role="tab" data-toggle="tab">Sign up</a>
+                    <a href="#m-signUp" aria-controls="profile" role="tab" data-toggle="tab">Sign Up</a>
                   </li>
                 </ul>
               </div>
@@ -438,21 +448,22 @@
   <!-- Custom -->
   <script src="build/js/48east.min.js"></script>
   <script>
-  $(document).ready(function() {
+    $(document).ready(function() {
 
-    $('#home-carousel').owlCarousel({
-      loop:false,
-      nav:true,
-      items:1,
-      dots:true,
-      dotsEach: true,
-      nav:true,
-      navText:[
-        '<svg class="icon icon-angel-left-arrow"><use xlink:href="images/icons/icons-defs.svg#icon-angel-left-arrow"></use></svg>',
-        '<svg class="icon icon-angel-right-arrow"><use xlink:href="images/icons/icons-defs.svg#icon-angel-right-arrow"></use></svg>'
-      ]
+      $('#home-carousel').owlCarousel({
+        loop:false,
+        nav:true,
+        items:1,
+        dots:true,
+        dotsEach: true,
+        nav:true,
+        navText:[
+          '<svg class="icon icon-angel-left-arrow"><use xlink:href="images/icons/icons-defs.svg#icon-angel-left-arrow"></use></svg>',
+          '<svg class="icon icon-angel-right-arrow"><use xlink:href="images/icons/icons-defs.svg#icon-angel-right-arrow"></use></svg>'
+        ]
+      });
+
     });
-  });
 
   </script>
 </body>

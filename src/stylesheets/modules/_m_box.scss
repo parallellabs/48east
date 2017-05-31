@@ -70,7 +70,7 @@ $root      : #{$app-prefix}-box;
     color: #888;
 
     font: {
-      size: 14px;
+      size: 16px;
     }
     &.large{
       font-size:16px;
@@ -155,6 +155,9 @@ $root      : #{$app-prefix}-box;
 
     font: {
       weight: 600;
+    }
+    &:hover{
+      color:$brand-primary;
     }
   }
   &__section {
@@ -337,6 +340,9 @@ $root      : #{$app-prefix}-box;
       &__title {
         font: {
           size: 18px;
+        }
+        @media (max-width: $break-point-xs-max){
+          font-size:16px;
         }
       }
     }

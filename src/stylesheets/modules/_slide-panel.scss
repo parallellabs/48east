@@ -10,14 +10,18 @@
   $sliding-panel-background-focus: lighten($sliding-panel-background, 5%);
 
   @include position(fixed, 0 0 0 auto);
+  @include prefixer(transform, translateX(340px), webkit moz ms spec);
 
   z-index: 999999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   height:100%;
   // background: $sliding-panel-background;
-  transition: all 0.25s linear;
-  transform: translateX(340px);
+  @include prefixer(transition, all 0.25s linear, webkit moz ms spec);
+
+  @media (min-width: 520px) and (max-width: $break-point-sm){
+    @include prefixer(transform, translateX(380px), webkit moz ms spec);
+  }
 
   // ul {
   //   margin: 0;
@@ -63,7 +67,6 @@
 }
 
 .sliding-panel-button {
-
   outline: none;
   cursor: pointer;
 

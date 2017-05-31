@@ -74,9 +74,9 @@ $root      : #{$app-prefix}-header;
   @media (min-width: $break-point-sm) {
     position: absolute;
     left: 50%;
-    margin-left: auto !important;
     margin-top: 0;
     margin-bottom: 0;
+    margin-left: auto !important;
 
     // margin-left: -75px !important;
     // width: 150px;
@@ -97,7 +97,7 @@ $root      : #{$app-prefix}-header;
   margin-bottom:0;
   background: #fff;
 
-  @media (min-width: $break-point-xs-max){
+  @media (min-width: $break-point-sm){
     height: 65px;
     box-shadow: none;
   }
@@ -111,6 +111,10 @@ $root      : #{$app-prefix}-header;
       width:100%;
     }
     .navbar-brand{
+      margin-right: auto;
+      margin-left: auto !important;
+      text-align:center;
+
       @media (max-width: 768px){
         position: static;
         display: block;
@@ -118,6 +122,11 @@ $root      : #{$app-prefix}-header;
         margin-right: auto;
         margin-left: auto !important;
         transform: none;
+
+        img{
+          display: inline-block;
+          margin-top: 20px;
+        }
       }
     }
   }
@@ -152,8 +161,7 @@ $root      : #{$app-prefix}-header;
 }
 
 .pre-login-nav{
-  overflow:hidden !important;
-
+      overflow: visible !important;
   @media (max-width: $break-point-xs-max){
     padding-right: 20px !important;
     padding-left: 20px !important;
@@ -162,6 +170,9 @@ $root      : #{$app-prefix}-header;
     border-left:none;
   }
 
+  // &.overflow-visible{
+  //   overflow:visible !important;
+  // }
   .location-input{
     position:relative;
     z-index: 999;
@@ -169,6 +180,7 @@ $root      : #{$app-prefix}-header;
     margin: 12px 0;
 
     @media (max-width: $break-point-xs-max){
+      // position:fixed;
       margin: 5px 0;
       width:calc(100% - 100px);
     }
@@ -182,8 +194,8 @@ $root      : #{$app-prefix}-header;
       background-color: #ffffff;
       color:#424242;
 
-      @media (max-width: $break-point-xs-max){
-        width:100%;
+      @media (max-width: $break-point-sm-max){
+        max-width: 198px;
       }
 
       &::-webkit-input-placeholder {
@@ -209,6 +221,13 @@ $root      : #{$app-prefix}-header;
       background-color:#fff;
       cursor:pointer;
 
+      @media (max-width: $break-point-sm-max){
+        margin-top: -1px;
+        margin-left: -1px;
+        width: 200px;
+        height: 42px;
+      }
+
       svg{
         margin-right: 10px;
         margin-bottom:-3px;
@@ -218,8 +237,30 @@ $root      : #{$app-prefix}-header;
       span{
         color:#424242;
       }
-    }
 
+    }
+    ul.suggestions{
+      position: absolute;
+      display:none;
+      padding:0;
+      width: 100%;
+      border: none;
+      background:#fff;
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+      list-style-type:none;
+
+      li{
+        display:block;
+        margin-right:0;
+        padding: 10px 20px;
+        color: #424242;
+        font-weight: 400;
+        font-size: 14px;
+      }
+      li:hover{
+        background-color: #fff7dc;
+      }
+    }
   }
   ul{
     li{
@@ -251,8 +292,8 @@ $root      : #{$app-prefix}-header;
             box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
 
             @media (max-width: 768px){
-              position:fixed;
-              top:100px;
+              position:absolute;
+              // top:100px;
               right: 20px;
               left: auto;
               width:180px;
@@ -358,8 +399,8 @@ $root      : #{$app-prefix}-header;
     transition: all ease 900ms;
 
     @media (max-width: $break-point-xs-max){
-      position: fixed;
-      top: 10px;
+      position: absolute;
+      top: 15px;
       right: 20px;
       margin:0;
     }

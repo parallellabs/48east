@@ -141,7 +141,7 @@ $root          : #{$app-prefix};
       background-repeat: no-repeat;
       color: white;
 
-      @media (min-width: $break-point-xs-max) {
+      @media (min-width: $break-point-sm) {
         padding-bottom: 120px;
       }
 
@@ -163,7 +163,7 @@ $root          : #{$app-prefix};
           &__title {
             position:relative;
 
-            @media (min-width: $break-point-xs-max) {
+            @media (min-width: $break-point-sm) {
               margin-bottom: 120px;
             }
 
@@ -196,6 +196,10 @@ $root          : #{$app-prefix};
       margin-bottom: 30px;
       color:#424242;
       font-family:$type-secondary;
+
+      @media (max-width: $break-point-xs-max) {
+        font-size:24px;
+      }
 
       font: {
         size: 30px;
@@ -345,8 +349,10 @@ $root          : #{$app-prefix};
         line-height: 1.42;
 
         @media (max-width: $break-point-xs-max) {
+          line-height:normal;
+
           font: {
-            size: 32px;
+            size: 28px;
             weight: 700;
           }
         }
@@ -376,6 +382,10 @@ $root          : #{$app-prefix};
         position:relative;
         margin-bottom: 20px;
         color:#424242;
+
+        @media (max-width: $break-point-xs-max){
+          font-size:22px;
+        }
 
         &:before{
           position:absolute;
